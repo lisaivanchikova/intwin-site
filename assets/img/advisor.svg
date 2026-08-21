@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" role="img" aria-label="An engineer at a desk answering a call directly, with conversation bubbles">
+  <rect x="0" y="0" width="560" height="340" rx="16" fill="#E7F3EE"/>
+  <circle cx="486" cy="66" r="30" fill="#D7EBE3"/>
+  <circle cx="60" cy="272" r="20" fill="#D7EBE3"/>
+
+  <!-- plant -->
+  <g transform="translate(56 150)">
+    <path d="M22 130V70" stroke="#3B425F" stroke-width="5" stroke-linecap="round"/>
+    <path d="M22 86C4 82-4 68-2 54c16-2 26 12 24 32z" fill="#4E9E7C"/>
+    <path d="M22 92c18-6 24-22 19-36-15 1-24 16-19 36z" fill="#66B894"/>
+    <path d="M6 130h32l-4 26a6 6 0 0 1-6 5H16a6 6 0 0 1-6-5z" fill="#3B425F"/>
+  </g>
+
+  <!-- desk -->
+  <rect x="126" y="256" width="330" height="10" rx="5" fill="#B9CBE6"/>
+  <rect x="160" y="266" width="12" height="42" rx="4" fill="#C9D6EA"/>
+  <rect x="410" y="266" width="12" height="42" rx="4" fill="#C9D6EA"/>
+
+  <!-- monitor -->
+  <g transform="translate(300 130)">
+    <rect x="0" y="0" width="130" height="92" rx="8" fill="#3B425F"/>
+    <rect x="8" y="8" width="114" height="76" rx="4" fill="#EAF2FE"/>
+    <rect x="18" y="18" width="46" height="7" rx="3.5" fill="#C7D8F2"/>
+    <rect x="18" y="32" width="94" height="6" rx="3" fill="#D8E5F7"/>
+    <rect x="18" y="44" width="72" height="6" rx="3" fill="#D8E5F7"/>
+    <rect x="18" y="60" width="40" height="12" rx="4" fill="#007AFF"/>
+    <rect x="52" y="92" width="26" height="16" rx="3" fill="#3B425F"/>
+    <rect x="34" y="108" width="62" height="7" rx="3.5" fill="#3B425F"/>
+  </g>
+
+  <!-- person -->
+  <g transform="translate(186 118)">
+    <path d="M-24 138c0-38 20-62 46-62s46 24 46 62z" fill="#007AFF"/>
+    <path d="M-24 138c0-38 20-62 46-62v62z" fill="#0062CC" opacity=".35"/>
+    <circle cx="22" cy="46" r="30" fill="#F0C9A4"/>
+    <path d="M-6 42C-6 22 6 10 22 10s28 12 28 32c0 6-3 8-6 5-7-8-15-12-22-12s-15 4-22 12c-3 3-6 1-6-5z" fill="#3B425F"/>
+    <!-- headset -->
+    <path d="M-8 44a30 30 0 0 1 60 0" fill="none" stroke="#2C3149" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-14" y="40" width="12" height="20" rx="6" fill="#2C3149"/>
+    <rect x="46" y="40" width="12" height="20" rx="6" fill="#2C3149"/>
+    <path d="M-8 58c0 12 8 18 18 18" fill="none" stroke="#2C3149" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="12" cy="76" r="4" fill="#2C3149"/>
+  </g>
+
+  <!-- speech bubbles -->
+  <g transform="translate(232 40)">
+    <rect x="0" y="0" width="120" height="46" rx="12" fill="#fff"/>
+    <path d="M26 46l-4 14 18-14z" fill="#fff"/>
+    <circle cx="30" cy="23" r="5" fill="#007AFF"/>
+    <circle cx="50" cy="23" r="5" fill="#66B894"/>
+    <circle cx="70" cy="23" r="5" fill="#C7D8F2"/>
+  </g>
+  <g transform="translate(376 66)">
+    <rect x="0" y="0" width="96" height="40" rx="12" fill="#3B425F"/>
+    <path d="M70 40l6 12-18-12z" fill="#3B425F"/>
+    <rect x="16" y="13" width="42" height="6" rx="3" fill="#7FBBFF"/>
+    <rect x="16" y="25" width="28" height="5" rx="2.5" fill="#666F91"/>
+  </g>
+</svg>
