@@ -95,7 +95,7 @@ header{
 }
 .hrow{display:flex;align-items:center;gap:28px;padding:14px 0}
 .brand{display:flex;align-items:center;gap:10px}
-.brand img{height:38px;width:auto}
+.brand img{height:38px;width:auto;flex:0 0 auto;object-fit:contain}
 .brand .wm{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.03em}
 .brand .wm .c{color:var(--blue)}
 .brand .wm .p{color:var(--muted);font-weight:600}
@@ -329,7 +329,7 @@ footer a{color:#9BA3B9;display:block;padding:4px 0}
 footer a:hover{color:#fff}
 .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.15fr;gap:32px}
 .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.fbrand img{height:34px;width:auto}
+.fbrand img{height:34px;width:auto;flex:0 0 auto;object-fit:contain}
 .fbrand .wm{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.03em}
 .fbrand .wm .c{color:#7FBBFF}
 .fbrand .wm .p{color:#9BA3B9;font-weight:600}
