@@ -53,11 +53,12 @@ for (const file of files) {
   }
 
   const active = (meta.active || '').trim();
+  const esc = (v) => v.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
   const out = layout
-    .replace('{{TITLE}}', meta.title)
-    .replace('{{DESC}}', meta.desc)
+    .replaceAll('{{TITLE}}', esc(meta.title))
+    .replaceAll('{{DESC}}', esc(meta.desc))
     .replace('{{BODY}}', body.trim())
-    .replace('{{YEAR}}', String(year))
+    .replaceAll('{{YEAR}}', String(year))
     .replace('{{ACTIVE_AI}}', active === 'ai' ? ' class="active"' : '')
     .replace('{{ACTIVE_PARTNERS}}', active === 'partners' ? ' class="active"' : '')
     .replace('{{ACTIVE_ABOUT}}', active === 'about' ? ' class="active"' : '');

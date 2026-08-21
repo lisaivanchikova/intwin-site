@@ -1,6 +1,6 @@
-# Intwin Partners — website
+# InTwin Partners — website
 
-Static, multi-page marketing site for Intwin Partners (intwin.tech). No framework, no build
+Static, multi-page marketing site for InTwin Partners (intwin.tech). No framework, no build
 dependencies beyond Node for the page assembly step. Served as plain HTML by GitHub Pages.
 
 **Live:** https://lisaivanchikova.github.io/intwin-site/
