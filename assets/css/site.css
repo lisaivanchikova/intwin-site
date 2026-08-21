@@ -1,16 +1,16 @@
 /* ==========================================================================
    Intwin Partners — design system
-   Brand palette is the logo's own: #007AFF blue, #3B425F navy.
+   Brand palette is the logo's own: #0050F0 blue, #011F5A navy.
    ========================================================================== */
 
 :root{
-  --blue:#007AFF;
-  --blue-d:#0062CC;
-  --blue-l:#E8F2FF;
-  --blue-xl:#F4F9FF;
-  --navy:#3B425F;
-  --navy-d:#2C3149;
-  --navy-xd:#232739;
+  --blue:#0050F0;
+  --blue-d:#003FC4;
+  --blue-l:#E4EDFF;
+  --blue-xl:#F3F7FF;
+  --navy:#011F5A;
+  --navy-d:#01184A;
+  --navy-xd:#01123A;
   --ink:#1E2233;
   --body:#5A6274;
   --muted:#8A91A3;
