@@ -20,7 +20,7 @@
   --white:#fff;
   --ok:#16A47A;
 
-  --sans:'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --sans:'IBM Plex Sans','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
   --r:14px; --r-s:8px; --r-xs:6px;
   --wrap:1140px;
   --shadow-s:0 1px 2px rgba(30,34,51,.06),0 1px 3px rgba(30,34,51,.05);
@@ -95,9 +95,10 @@ header{
 }
 .hrow{display:flex;align-items:center;gap:28px;padding:14px 0}
 .brand{display:flex;align-items:center;gap:10px}
-.brand img{height:34px;width:auto}
-.brand .wm{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.025em}
-.brand .wm span{color:var(--blue)}
+.brand img{height:38px;width:auto}
+.brand .wm{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.03em}
+.brand .wm .c{color:var(--blue)}
+.brand .wm .p{color:var(--muted);font-weight:600}
 nav.main{display:flex;gap:4px;align-items:center;margin-left:auto}
 nav.main > a,.navitem > button{
   font-size:15px;font-weight:500;color:var(--ink);background:none;border:0;
@@ -328,9 +329,10 @@ footer a{color:#9BA3B9;display:block;padding:4px 0}
 footer a:hover{color:#fff}
 .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.15fr;gap:32px}
 .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.fbrand img{height:30px}
-.fbrand .wm{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.02em}
-.fbrand .wm span{color:#7FBBFF}
+.fbrand img{height:34px}
+.fbrand .wm{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.03em}
+.fbrand .wm .c{color:#7FBBFF}
+.fbrand .wm .p{color:#9BA3B9;font-weight:600}
 .fabout{font-size:14px;line-height:1.6;max-width:34ch}
 .fcontact div{padding:4px 0;display:flex;gap:9px;align-items:flex-start}
 .fcontact .ico{width:16px;height:16px;flex:0 0 auto;margin-top:4px;color:#7FBBFF}
