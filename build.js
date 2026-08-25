@@ -60,6 +60,8 @@ for (const file of files) {
     .replace('{{BODY}}', body.trim())
     .replaceAll('{{YEAR}}', String(year))
     .replace('{{ACTIVE_AI}}', active === 'ai' ? ' class="active"' : '')
+    .replace('{{ACTIVE_SERVICES}}', active === 'services' ? ' class="active"' : '')
+    .replace('{{ACTIVE_SOLUTIONS}}', active === 'solutions' ? ' class="active"' : '')
     .replace('{{ACTIVE_PARTNERS}}', active === 'partners' ? ' class="active"' : '')
     .replace('{{ACTIVE_ABOUT}}', active === 'about' ? ' class="active"' : '');
 

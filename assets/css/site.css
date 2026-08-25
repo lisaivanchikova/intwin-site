@@ -100,18 +100,26 @@ header{
 .brand .wm .c{color:var(--blue)}
 .brand .wm .p{color:var(--muted);font-weight:600}
 nav.main{display:flex;gap:4px;align-items:center;margin-left:auto}
-nav.main > a,.navitem > button{
+nav.main > a,.navitem > a,.navitem > button{
   font-size:15px;font-weight:500;color:var(--ink);background:none;border:0;
   font-family:inherit;cursor:pointer;padding:8px 12px;border-radius:var(--r-xs);
   display:inline-flex;align-items:center;gap:5px;
 }
-nav.main > a:hover,.navitem > button:hover{color:var(--blue);background:var(--blue-xl)}
-nav.main > a.active{color:var(--blue)}
-.navitem{position:relative}
-.navitem > button::after{
+nav.main > a:hover,.navitem > a:hover,.navitem > button:hover{color:var(--blue);background:var(--blue-xl)}
+nav.main > a.active,.navitem > a.active{color:var(--blue)}
+.navitem{position:relative;display:inline-flex;align-items:center}
+.navitem > a::after{
   content:"";width:6px;height:6px;border-right:1.6px solid currentColor;
-  border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);
+  border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:2px;
 }
+.navtoggle{display:none;background:none;border:0;font:inherit;color:inherit;cursor:pointer}
+.navtoggle::after{
+  content:"";display:block;width:7px;height:7px;border-right:1.8px solid currentColor;
+  border-bottom:1.8px solid currentColor;transform:rotate(45deg) translateY(-2px);
+}
+.navitem.open > .navtoggle::after{transform:rotate(-135deg) translateY(2px)}
+/* Keyboard users reach the submenu without a pointer. */
+.navitem:focus-within > .dropdown{display:block}
 .dropdown{
   position:absolute;top:calc(100% + 6px);left:0;background:#fff;
   border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-l);
@@ -135,11 +143,20 @@ nav.main > a.active{color:var(--blue)}
     border-bottom:1px solid var(--line);box-shadow:var(--shadow-m);
   }
   nav.main.open{display:flex}
-  .navitem > button{width:100%;justify-content:space-between}
-  .dropdown{position:static;display:none;border:0;box-shadow:none;padding:0 0 0 12px;min-width:0}
+  .navitem{display:flex;flex-wrap:wrap;align-items:center;width:100%}
+  .navitem > a{flex:1}
+  .navitem > a::after{display:none}
+  .dropdown{position:static;display:none;border:0;box-shadow:none;padding:0 0 0 12px;min-width:0;flex-basis:100%}
+  .navitem:focus-within > .dropdown{display:none}
   .navitem.open .dropdown{display:block}
   .hdr-cta{margin:10px 0 0}
   .burger{display:block}
+}
+
+@media(max-width:960px),(hover:none){
+  .navtoggle{display:inline-flex;align-items:center;justify-content:center;
+    min-width:44px;min-height:40px;border-radius:var(--r-xs)}
+  .navitem > a::after{display:none}
 }
 
 /* ---------- hero ---------- */
