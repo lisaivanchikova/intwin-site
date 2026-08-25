@@ -100,20 +100,20 @@ header{
 .brand .wm .c{color:var(--blue)}
 .brand .wm .p{color:var(--muted);font-weight:600}
 nav.main{display:flex;gap:4px;align-items:center;margin-left:auto}
-nav.main > a,.navitem > a,.navitem > button{
+nav.main > a,.navitem > a{
   font-size:15px;font-weight:500;color:var(--ink);background:none;border:0;
   font-family:inherit;cursor:pointer;padding:8px 12px;border-radius:var(--r-xs);
   display:inline-flex;align-items:center;gap:5px;
 }
-nav.main > a:hover,.navitem > a:hover,.navitem > button:hover{color:var(--blue);background:var(--blue-xl)}
+nav.main > a:hover,.navitem > a:hover{color:var(--blue);background:var(--blue-xl)}
 nav.main > a.active,.navitem > a.active{color:var(--blue)}
 .navitem{position:relative;display:inline-flex;align-items:center}
 .navitem > a::after{
   content:"";width:6px;height:6px;border-right:1.6px solid currentColor;
   border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:2px;
 }
-.navtoggle{display:none;background:none;border:0;font:inherit;color:inherit;cursor:pointer}
-.navtoggle::after{
+.navitem > .navtoggle{display:none;background:none;border:0;font:inherit;color:inherit;cursor:pointer}
+.navitem > .navtoggle::after{
   content:"";display:block;width:7px;height:7px;border-right:1.8px solid currentColor;
   border-bottom:1.8px solid currentColor;transform:rotate(45deg) translateY(-2px);
 }
@@ -154,7 +154,7 @@ nav.main > a.active,.navitem > a.active{color:var(--blue)}
 }
 
 @media(max-width:960px),(hover:none){
-  .navtoggle{display:inline-flex;align-items:center;justify-content:center;
+  .navitem > .navtoggle{display:inline-flex;align-items:center;justify-content:center;
     min-width:44px;min-height:40px;border-radius:var(--r-xs)}
   .navitem > a::after{display:none}
 }
