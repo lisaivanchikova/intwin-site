@@ -226,7 +226,11 @@ a.card:hover{border-color:rgba(61,155,255,.5);box-shadow:var(--shadow-m)}
 .card .ico{width:34px;height:34px;color:var(--blue);margin-bottom:14px}
 .card h3{margin-bottom:6px}
 .card p{font-size:14.5px;line-height:1.55;margin-bottom:0}
+/* Cards in a row rarely have equal copy, so the link is pinned to the bottom
+   rather than floating wherever the paragraph happens to end. */
+a.card{display:flex;flex-direction:column}
 .card .more{margin-top:12px;font-size:14px;font-weight:600;color:var(--blue)}
+a.card .more{margin-top:auto;padding-top:12px}
 
 .card-dark{
   background:var(--navy-d);border:1px solid rgba(120,170,255,.16);color:#C3C9DB;position:relative;overflow:hidden;
@@ -428,3 +432,28 @@ footer a:hover{color:#fff}
   padding:12px 14px;font-size:13.5px;color:#F5D6A8;margin-bottom:20px;
 }
 .todo b{color:#FFB44A}
+
+/* ---------- comparison table ---------- */
+/* Four columns will not fold onto a phone without becoming unreadable, so the
+   table scrolls inside its own frame rather than the page scrolling sideways. */
+.cmp{
+  margin-top:28px;overflow-x:auto;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r);
+}
+.cmp table{border-collapse:collapse;width:100%;min-width:780px;font-size:14.5px}
+.cmp th,.cmp td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line2);vertical-align:top;line-height:1.5}
+.cmp thead th{
+  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);background:var(--surface-2);white-space:nowrap;
+}
+.cmp thead th.us{color:var(--blue)}
+.cmp tbody th{font-weight:600;color:var(--ink);width:210px}
+.cmp td{color:var(--body)}
+.cmp .col-us{background:rgba(61,155,255,.07);color:var(--ink)}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+
+/* small label above a card heading */
+.kicker{
+  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:8px;
+}
