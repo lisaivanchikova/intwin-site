@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" role="img" aria-label="Two business owners shaking hands in front of a city skyline">
-  <rect x="0" y="0" width="600" height="430" rx="16" fill="#EAF2FE"/>
+  <rect x="0" y="0" width="600" height="430" rx="16" fill="#282F3C"/>
 
   <!-- skyline -->
-  <g fill="#D3E3F8">
+  <g fill="#222833">
     <rect x="30" y="128" width="62" height="222" rx="4"/>
     <rect x="102" y="180" width="46" height="170" rx="4"/>
     <rect x="158" y="104" width="70" height="246" rx="4"/>
@@ -10,7 +10,7 @@
     <rect x="452" y="116" width="66" height="234" rx="4"/>
     <rect x="528" y="192" width="44" height="158" rx="4"/>
   </g>
-  <g fill="#C2D8F3">
+  <g fill="#1F242E">
     <rect x="44" y="146" width="13" height="15" rx="2"/><rect x="66" y="146" width="13" height="15" rx="2"/>
     <rect x="44" y="176" width="13" height="15" rx="2"/><rect x="66" y="176" width="13" height="15" rx="2"/>
     <rect x="44" y="206" width="13" height="15" rx="2"/><rect x="66" y="206" width="13" height="15" rx="2"/>
@@ -23,50 +23,50 @@
   </g>
 
   <!-- ground -->
-  <rect x="0" y="350" width="600" height="80" fill="#DCE9FA"/>
-  <ellipse cx="300" cy="356" rx="176" ry="15" fill="#CCDFF6"/>
+  <rect x="0" y="350" width="600" height="80" fill="#252B37"/>
+  <ellipse cx="300" cy="356" rx="176" ry="15" fill="#202630"/>
 
   <!-- ================= left person (navy) ================= -->
   <g>
     <!-- legs -->
-    <path d="M212 262h50l-3 88h-17l-3-52-3 52h-17z" fill="#01184A"/>
+    <path d="M212 262h50l-3 88h-17l-3-52-3 52h-17z" fill="#D3DAEA"/>
     <!-- shoes -->
-    <path d="M188 350h32v9a3 3 0 0 1-3 3h-26a3 3 0 0 1 0-12z" fill="#01123A"/>
-    <path d="M240 350h32a3 3 0 0 1 0 12h-26a3 3 0 0 1-3-3z" fill="#01123A"/>
+    <path d="M188 350h32v9a3 3 0 0 1-3 3h-26a3 3 0 0 1 0-12z" fill="#E3E8F2"/>
+    <path d="M240 350h32a3 3 0 0 1 0 12h-26a3 3 0 0 1-3-3z" fill="#E3E8F2"/>
     <!-- torso -->
-    <path d="M209 190c0-16 13-28 28-28s28 12 28 28v78h-56z" fill="#011F5A"/>
+    <path d="M209 190c0-16 13-28 28-28s28 12 28 28v78h-56z" fill="#C2CBE0"/>
     <!-- shirt collar -->
-    <path d="M228 163h18l-9 20z" fill="#EDF2FA"/>
+    <path d="M228 163h18l-9 20z" fill="#29303D"/>
     <!-- back arm -->
-    <path d="M213 200l-10 46" stroke="#011F5A" stroke-width="17" stroke-linecap="round"/>
+    <path d="M213 200l-10 46" stroke="#C2CBE0" stroke-width="17" stroke-linecap="round"/>
     <!-- head -->
     <circle cx="237" cy="140" r="23" fill="#F0C9A4"/>
-    <path d="M214 138c0-15 10-25 23-25s23 10 23 25c0 4-2 5-4 3-5-6-12-9-19-9s-14 3-19 9c-2 2-4 1-4-3z" fill="#01184A"/>
+    <path d="M214 138c0-15 10-25 23-25s23 10 23 25c0 4-2 5-4 3-5-6-12-9-19-9s-14 3-19 9c-2 2-4 1-4-3z" fill="#D3DAEA"/>
     <!-- front arm reaching right -->
-    <path d="M261 202l38 26" stroke="#011F5A" stroke-width="17" stroke-linecap="round"/>
+    <path d="M261 202l38 26" stroke="#C2CBE0" stroke-width="17" stroke-linecap="round"/>
   </g>
 
   <!-- ================= right person (blue) ================= -->
   <g>
     <!-- legs -->
-    <path d="M338 262h50l-3 88h-17l-3-52-3 52h-17z" fill="#01184A"/>
-    <path d="M328 350h32a3 3 0 0 1 0 12h-26a3 3 0 0 1-3-3z" fill="#01123A"/>
-    <path d="M380 350h32v9a3 3 0 0 1-3 3h-26a3 3 0 0 1 0-12z" fill="#01123A"/>
+    <path d="M338 262h50l-3 88h-17l-3-52-3 52h-17z" fill="#D3DAEA"/>
+    <path d="M328 350h32a3 3 0 0 1 0 12h-26a3 3 0 0 1-3-3z" fill="#E3E8F2"/>
+    <path d="M380 350h32v9a3 3 0 0 1-3 3h-26a3 3 0 0 1 0-12z" fill="#E3E8F2"/>
     <!-- torso -->
-    <path d="M335 190c0-16 13-28 28-28s28 12 28 28v78h-56z" fill="#0050F0"/>
-    <path d="M354 163h18l-9 20z" fill="#EDF2FA"/>
+    <path d="M335 190c0-16 13-28 28-28s28 12 28 28v78h-56z" fill="#0A84FF"/>
+    <path d="M354 163h18l-9 20z" fill="#29303D"/>
     <!-- back arm -->
-    <path d="M387 200l10 46" stroke="#0050F0" stroke-width="17" stroke-linecap="round"/>
+    <path d="M387 200l10 46" stroke="#0A84FF" stroke-width="17" stroke-linecap="round"/>
     <!-- head -->
     <circle cx="363" cy="140" r="23" fill="#E8B78F"/>
-    <path d="M340 137c0-14 10-24 23-24s23 10 23 24c0 5-3 6-5 3-5-6-11-9-18-9s-13 3-18 9c-2 3-5 2-5-3z" fill="#011F5A"/>
+    <path d="M340 137c0-14 10-24 23-24s23 10 23 24c0 5-3 6-5 3-5-6-11-9-18-9s-13 3-18 9c-2 3-5 2-5-3z" fill="#C2CBE0"/>
     <!-- front arm reaching left -->
-    <path d="M339 202l-38 26" stroke="#0050F0" stroke-width="17" stroke-linecap="round"/>
+    <path d="M339 202l-38 26" stroke="#0A84FF" stroke-width="17" stroke-linecap="round"/>
   </g>
 
   <!-- handshake -->
   <g>
-    <circle cx="300" cy="228" r="24" fill="#fff" opacity=".5"/>
+    <circle cx="300" cy="228" r="24" fill="#2E3646" opacity=".5"/>
     <path d="M282 228c5-7 11-11 18-11s13 4 18 11c-5 7-11 11-18 11s-13-4-18-11z" fill="#F0C9A4"/>
     <path d="M300 217c7 0 13 4 18 11-5 7-11 11-18 11z" fill="#E8B78F"/>
   </g>

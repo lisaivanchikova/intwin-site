@@ -1,82 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Laptop showing a monitoring dashboard beside a security shield">
   <defs>
     <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F7FAFF"/><stop offset="1" stop-color="#EAF2FE"/>
+      <stop offset="0" stop-color="#2E3646"/><stop offset="1" stop-color="#282F3C"/>
     </linearGradient>
     <linearGradient id="shd" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2E9BFF"/><stop offset="1" stop-color="#0050F0"/>
+      <stop offset="0" stop-color="#5AA9FF"/><stop offset="1" stop-color="#0A84FF"/>
     </linearGradient>
   </defs>
 
   <!-- soft background blobs -->
-  <ellipse cx="300" cy="392" rx="248" ry="26" fill="#E3EEFC"/>
-  <circle cx="86" cy="86" r="40" fill="#E8F2FF"/>
-  <circle cx="528" cy="330" r="26" fill="#E8F2FF"/>
-  <path d="M446 74h58a17 17 0 0 1 0 34h-58a17 17 0 0 1 0-34z" fill="#EDF4FE"/>
-  <path d="M470 62h30a13 13 0 0 1 0 26h-30a13 13 0 0 1 0-26z" fill="#F5F9FF"/>
+  <ellipse cx="300" cy="392" rx="248" ry="26" fill="#262D3A"/>
+  <circle cx="86" cy="86" r="40" fill="#282F3C"/>
+  <circle cx="528" cy="330" r="26" fill="#282F3C"/>
+  <path d="M446 74h58a17 17 0 0 1 0 34h-58a17 17 0 0 1 0-34z" fill="#2A313F"/>
+  <path d="M470 62h30a13 13 0 0 1 0 26h-30a13 13 0 0 1 0-26z" fill="#2C3442"/>
 
   <!-- plant -->
-  <path d="M74 386V330" stroke="#011F5A" stroke-width="5" stroke-linecap="round"/>
-  <path d="M74 344c-24-4-34-22-32-40 20-2 34 14 32 40z" fill="#4E9E7C"/>
-  <path d="M74 350c22-8 30-28 24-45-19 1-30 20-24 45z" fill="#66B894"/>
-  <path d="M56 386h36l-5 30a7 7 0 0 1-7 6H68a7 7 0 0 1-7-6z" fill="#011F5A"/>
+  <path d="M74 386V330" stroke="#C2CBE0" stroke-width="5" stroke-linecap="round"/>
+  <path d="M74 344c-24-4-34-22-32-40 20-2 34 14 32 40z" fill="#45B96A"/>
+  <path d="M74 350c22-8 30-28 24-45-19 1-30 20-24 45z" fill="#5FC98A"/>
+  <path d="M56 386h36l-5 30a7 7 0 0 1-7 6H68a7 7 0 0 1-7-6z" fill="#C2CBE0"/>
 
   <!-- laptop base -->
-  <path d="M132 380h336l24 22a6 6 0 0 1-4 10H112a6 6 0 0 1-4-10z" fill="#C9D6EA"/>
-  <rect x="252" y="386" width="96" height="7" rx="3.5" fill="#AEC0DA"/>
+  <path d="M132 380h336l24 22a6 6 0 0 1-4 10H112a6 6 0 0 1-4-10z" fill="#1F242E"/>
+  <rect x="252" y="386" width="96" height="7" rx="3.5" fill="#1A1F28"/>
 
   <!-- laptop screen -->
-  <rect x="150" y="112" width="300" height="270" rx="12" fill="#011F5A"/>
+  <rect x="150" y="112" width="300" height="270" rx="12" fill="#C2CBE0"/>
   <rect x="161" y="123" width="278" height="240" rx="6" fill="url(#scr)"/>
 
   <!-- screen: top bar -->
-  <rect x="161" y="123" width="278" height="30" rx="6" fill="#fff"/>
-  <rect x="161" y="147" width="278" height="6" fill="#fff"/>
-  <circle cx="176" cy="138" r="4" fill="#DDE1EA"/>
-  <circle cx="189" cy="138" r="4" fill="#DDE1EA"/>
-  <circle cx="202" cy="138" r="4" fill="#DDE1EA"/>
-  <rect x="222" y="133" width="86" height="10" rx="5" fill="#EDEFF4"/>
+  <rect x="161" y="123" width="278" height="30" rx="6" fill="#2E3646"/>
+  <rect x="161" y="147" width="278" height="6" fill="#2E3646"/>
+  <circle cx="176" cy="138" r="4" fill="#222833"/>
+  <circle cx="189" cy="138" r="4" fill="#222833"/>
+  <circle cx="202" cy="138" r="4" fill="#222833"/>
+  <rect x="222" y="133" width="86" height="10" rx="5" fill="#272D39"/>
 
   <!-- screen: stat tiles -->
-  <rect x="175" y="167" width="76" height="42" rx="6" fill="#fff"/>
-  <rect x="184" y="176" width="34" height="6" rx="3" fill="#C7D8F2"/>
-  <rect x="184" y="188" width="50" height="11" rx="3" fill="#0050F0"/>
-  <rect x="261" y="167" width="76" height="42" rx="6" fill="#fff"/>
-  <rect x="270" y="176" width="30" height="6" rx="3" fill="#C7D8F2"/>
-  <rect x="270" y="188" width="44" height="11" rx="3" fill="#011F5A"/>
-  <rect x="347" y="167" width="76" height="42" rx="6" fill="#fff"/>
-  <rect x="356" y="176" width="36" height="6" rx="3" fill="#C7D8F2"/>
-  <rect x="356" y="188" width="38" height="11" rx="3" fill="#16A47A"/>
+  <rect x="175" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
+  <rect x="184" y="176" width="34" height="6" rx="3" fill="#1F242E"/>
+  <rect x="184" y="188" width="50" height="11" rx="3" fill="#0A84FF"/>
+  <rect x="261" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
+  <rect x="270" y="176" width="30" height="6" rx="3" fill="#1F242E"/>
+  <rect x="270" y="188" width="44" height="11" rx="3" fill="#C2CBE0"/>
+  <rect x="347" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
+  <rect x="356" y="176" width="36" height="6" rx="3" fill="#1F242E"/>
+  <rect x="356" y="188" width="38" height="11" rx="3" fill="#30D158"/>
 
   <!-- screen: chart card -->
-  <rect x="175" y="221" width="248" height="128" rx="8" fill="#fff"/>
-  <rect x="188" y="234" width="66" height="7" rx="3.5" fill="#DDE1EA"/>
+  <rect x="175" y="221" width="248" height="128" rx="8" fill="#2E3646"/>
+  <rect x="188" y="234" width="66" height="7" rx="3.5" fill="#222833"/>
   <!-- bars -->
-  <rect x="190" y="306" width="17" height="28" rx="3" fill="#CFE2FA"/>
-  <rect x="216" y="292" width="17" height="42" rx="3" fill="#CFE2FA"/>
-  <rect x="242" y="299" width="17" height="35" rx="3" fill="#CFE2FA"/>
-  <rect x="268" y="277" width="17" height="57" rx="3" fill="#0050F0"/>
-  <rect x="294" y="286" width="17" height="48" rx="3" fill="#CFE2FA"/>
-  <rect x="320" y="266" width="17" height="68" rx="3" fill="#0050F0"/>
-  <rect x="346" y="281" width="17" height="53" rx="3" fill="#CFE2FA"/>
-  <rect x="372" y="255" width="17" height="79" rx="3" fill="#0050F0"/>
+  <rect x="190" y="306" width="17" height="28" rx="3" fill="#212730"/>
+  <rect x="216" y="292" width="17" height="42" rx="3" fill="#212730"/>
+  <rect x="242" y="299" width="17" height="35" rx="3" fill="#212730"/>
+  <rect x="268" y="277" width="17" height="57" rx="3" fill="#0A84FF"/>
+  <rect x="294" y="286" width="17" height="48" rx="3" fill="#212730"/>
+  <rect x="320" y="266" width="17" height="68" rx="3" fill="#0A84FF"/>
+  <rect x="346" y="281" width="17" height="53" rx="3" fill="#212730"/>
+  <rect x="372" y="255" width="17" height="79" rx="3" fill="#0A84FF"/>
   <!-- trend line -->
-  <path d="M198 296l26-10 26 6 26-18 26 8 26-16 26 9 26-18" fill="none" stroke="#011F5A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="380" cy="257" r="4.5" fill="#011F5A"/>
+  <path d="M198 296l26-10 26 6 26-18 26 8 26-16 26 9 26-18" fill="none" stroke="#C2CBE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="380" cy="257" r="4.5" fill="#C2CBE0"/>
 
   <!-- floating shield -->
   <g transform="translate(392 196)">
-    <path d="M62 0l58 22v46c0 40-25 71-58 84-33-13-58-44-58-84V22z" fill="#fff"/>
+    <path d="M62 0l58 22v46c0 40-25 71-58 84-33-13-58-44-58-84V22z" fill="#2E3646"/>
     <path d="M62 8l50 19v40c0 35-21 62-50 74-29-12-50-39-50-74V27z" fill="url(#shd)"/>
-    <path d="M40 72l16 16 30-32" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 72l16 16 30-32" fill="none" stroke="#2E3646" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
   <!-- small floating cards -->
   <g transform="translate(94 176)">
-    <rect x="0" y="0" width="86" height="34" rx="8" fill="#fff" stroke="#E1E9F5"/>
-    <circle cx="19" cy="17" r="9" fill="#E8F2FF"/>
-    <path d="M15 17l3 3 6-6" fill="none" stroke="#0050F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="34" y="10" width="40" height="5" rx="2.5" fill="#DDE1EA"/>
-    <rect x="34" y="20" width="26" height="5" rx="2.5" fill="#EDEFF4"/>
+    <rect x="0" y="0" width="86" height="34" rx="8" fill="#2E3646" stroke="#252B37"/>
+    <circle cx="19" cy="17" r="9" fill="#282F3C"/>
+    <path d="M15 17l3 3 6-6" fill="none" stroke="#0A84FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="34" y="10" width="40" height="5" rx="2.5" fill="#222833"/>
+    <rect x="34" y="20" width="26" height="5" rx="2.5" fill="#272D39"/>
   </g>
 </svg>
