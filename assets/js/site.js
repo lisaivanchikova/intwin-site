@@ -61,3 +61,37 @@
     if (nav) nav.classList.remove('open');
   });
 })();
+
+/* Sticky call to action, phones only. It appears once the header CTA has
+   scrolled out of reach and stands down while the form is on screen, so it
+   never sits on top of the thing it is asking you to use. */
+(function () {
+  'use strict';
+
+  var cta = document.querySelector('.stickycta');
+  if (!cta) return;
+
+  var target = document.querySelector(cta.getAttribute('href') || '');
+  var atTarget = false;
+
+  if (target && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      atTarget = entries[0].isIntersecting;
+      update();
+    }, { rootMargin: '0px 0px -35% 0px' }).observe(target);
+  }
+
+  function update() {
+    var past = window.pageYOffset > 420;
+    cta.classList.toggle('show', past && !atTarget);
+  }
+
+  var queued = false;
+  window.addEventListener('scroll', function () {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; update(); });
+  }, { passive: true });
+
+  update();
+})();

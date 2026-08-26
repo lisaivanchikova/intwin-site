@@ -65,6 +65,9 @@ p:last-child{margin-bottom:0}
 .sec{padding:72px 0}
 .sec-sm{padding:52px 0}
 .sec-mist{background:var(--mist)}
+/* Dropping an unfinished block can leave two tinted bands touching; read them
+   as one continuous band instead of a doubled seam. */
+.sec-mist + .sec-mist,.sec-mist + .sec-sm.sec-mist{padding-top:0}
 .sec-line{border-top:1px solid var(--line2)}
 .mb-0{margin-bottom:0}
 
@@ -387,3 +390,41 @@ footer a:hover{color:#fff}
 /* ---------- dark-mode odds and ends ---------- */
 ::placeholder{color:var(--muted);opacity:1}
 ::selection{background:rgba(61,155,255,.32);color:#fff}
+
+/* ---------- join: owner-facing shell ---------- */
+.topbar-join{background:#0D1626;color:#AEBBD3}
+.topbar-join a{color:#A6C8F7}
+.topbar-join a:hover{color:#fff}
+.brand .wm .p,.fbrand .wm .p{font-weight:500}
+.fgrid-join{grid-template-columns:1.7fr 1fr 1fr}
+@media(max-width:760px){.fgrid-join{grid-template-columns:1fr}}
+
+/* team */
+.team .pfp{
+  width:64px;height:64px;border-radius:50%;background:var(--surface-2);
+  border:1px dashed var(--line);margin-bottom:14px;
+}
+.team .role{font-size:13px;font-weight:600;color:var(--blue);margin:2px 0 8px}
+
+/* sticky call to action — the header CTA scrolls away on a phone, so the
+   primary action follows the thumb instead. It stands down once the form
+   itself is on screen, so it never covers what it is pointing at. */
+.stickycta{
+  display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;
+  background:var(--blue-solid);color:#fff;border:1px solid var(--blue-solid);
+  font-weight:600;font-size:15.5px;text-align:center;line-height:1.3;
+  padding:16px 18px;border-radius:var(--r-s);box-shadow:var(--shadow-l);
+  transform:translateY(150%);transition:transform .22s ease;
+}
+@media(max-width:960px){
+  .stickycta{display:block}
+  .stickycta.show{transform:translateY(0)}
+}
+
+/* unfinished block, draft builds only */
+.todo{
+  background:rgba(255,180,74,.13);border:1px solid rgba(255,180,74,.4);
+  border-left:3px solid #FFB44A;border-radius:var(--r-s);
+  padding:12px 14px;font-size:13.5px;color:#F5D6A8;margin-bottom:20px;
+}
+.todo b{color:#FFB44A}
