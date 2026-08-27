@@ -235,12 +235,12 @@ nav.main > a.hdr-cta:hover{background:var(--signal-h);border-color:var(--signal-
 /* Flat. No gradients anywhere in this brand.
    The dot-wave is the hero expression of the pattern family and appears once
    on the site: here, bleeding off the right edge, behind the empty half of the
-   grid. It is a crop of the master wave, recoloured for a dark ground — never
-   redrawn. */
+   grid. Drawn as vector from the master's construction, so it stays crisp at any
+   viewport instead of upscaling a crop. */
 .hero{background:var(--well);border-bottom:1px solid var(--line2);padding:60px 0 64px}
 .hero::after{
   inset:0 -4% 0 42%;
-  background:url("../img/pattern-wave.png") right center/cover no-repeat;
+  background:url("../img/pattern-wave.svg") right center/cover no-repeat;
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 100%);
   mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 100%);
 }
@@ -268,7 +268,7 @@ nav.main > a.hdr-cta:hover{background:var(--signal-h);border-color:var(--signal-
 .phero{background:var(--well);border-bottom:1px solid var(--line2);padding:56px 0}
 .phero::after{
   inset:0 -4% 0 46%;
-  background:url("../img/pattern-wave.png") right center/cover no-repeat;
+  background:url("../img/pattern-wave.svg") right center/cover no-repeat;
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 100%);
   mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 100%);
 }
