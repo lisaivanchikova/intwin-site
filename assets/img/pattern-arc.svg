@@ -1,15 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" fill="none">
 <line x1="0" y1="96" x2="960" y2="96" stroke="#A9BDF0" stroke-width="2" opacity=".13"/>
-<path d="M-66 96 A46 46 0 0 1 26 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="78" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
-<path d="M130 96 A46 46 0 0 1 222 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="274" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
-<path d="M326 96 A46 46 0 0 1 418 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="470" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
-<path d="M522 96 A46 46 0 0 1 614 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="666" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
-<path d="M718 96 A46 46 0 0 1 810 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="862" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
-<path d="M914 96 A46 46 0 0 1 1006 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
-<circle cx="1058" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
+<path d="M8 96 A40 40 0 0 1 88 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
+<path d="M200 96 A40 40 0 0 1 280 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
+<path d="M392 96 A40 40 0 0 1 472 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
+<path d="M584 96 A40 40 0 0 1 664 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
+<path d="M776 96 A40 40 0 0 1 856 96" stroke="#A9BDF0" stroke-width="8" opacity=".15"/>
+<circle cx="144" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
+<circle cx="336" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
+<circle cx="528" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
+<circle cx="720" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
+<circle cx="912" cy="96" r="6" fill="#A9BDF0" opacity=".22"/>
 </svg>
