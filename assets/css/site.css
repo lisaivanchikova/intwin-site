@@ -600,3 +600,97 @@ footer a:hover{color:#fff}
   .rebrand .arw{width:auto;padding:2px 0}
   .rebrand .arw svg{transform:rotate(90deg)}
 }
+
+
+/* ==========================================================================
+   Ported from Gulnar's redesign, retuned to the brandbook.
+   Her structure and copy; our tokens. Gradients, glows and the pill radius
+   are gone because the brandbook forbids them; IBM Plex Mono became JetBrains
+   Mono; her system blues became Signal and Echo.
+   ========================================================================== */
+
+/* Skip link — we had none at all. */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:200;background:var(--signal);color:#fff;
+  padding:12px 20px;border-radius:0 0 var(--r-s) 0;font-size:14px;font-weight:600;
+}
+.skip:focus{left:0}
+
+/* Campaign bar, above everything. */
+.announce{
+  background:var(--ink-navy);color:#C7D2EA;border-bottom:1px solid var(--line2);
+  font-family:var(--mono);font-size:12px;padding:9px 0;
+}
+.announce .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center}
+.announce a{color:var(--echo);border-bottom:1px solid rgba(169,189,240,.4);padding-bottom:1px;white-space:nowrap}
+.announce a:hover{border-bottom-color:var(--echo)}
+
+/* Note under the hero CTAs. */
+.hero-note{
+  display:flex;align-items:center;gap:9px;margin-top:18px;
+  font-family:var(--mono);font-size:11.5px;color:var(--muted);
+}
+.hero-note .dot,.diagram-live .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--signal);flex:0 0 auto;
+}
+
+/* The proof strip the brandbook mockup puts under the hero copy. */
+.noc{
+  grid-column:1/-1;margin-top:20px;
+  display:flex;align-items:stretch;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--ground);
+}
+.noc-item{padding:10px 16px;border-right:1px solid var(--line);flex:1 1 auto}
+.noc-item:last-child{border-right:0}
+.noc-item b{
+  display:block;font-family:var(--mono);font-size:15px;font-weight:700;
+  color:var(--echo);letter-spacing:-.01em;font-variant-numeric:tabular-nums;
+}
+.noc-item span{display:block;font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
+
+/* The schematic. Flat surfaces, hairline border, no glow. */
+.diagram{
+  background:var(--ground);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(18px,2.2vw,26px);position:relative;overflow:hidden;
+}
+.diagram::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,rgba(169,189,240,.10) 1px,transparent 0);
+  background-size:20px 20px;
+}
+.diagram-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;position:relative}
+.diagram-top .mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.diagram-live{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--echo)}
+.diagram svg{position:relative;width:100%;height:auto;display:block}
+
+.d-flow{stroke:rgba(169,189,240,.5);stroke-width:1.4;fill:none;stroke-dasharray:4 6;animation:flow 3.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-100}}
+.d-tile{fill:rgba(255,255,255,.045);stroke:var(--line)}
+.d-txt{fill:#D6DEF2;font-family:var(--mono);font-size:10px}
+.d-txt-dim{fill:var(--muted);font-family:var(--mono);font-size:8.5px;letter-spacing:.14em}
+.d-core-ring{fill:none;stroke:rgba(0,87,255,.45);stroke-width:1.4}
+.d-core-pulse{fill:none;stroke:rgba(0,87,255,.6);stroke-width:1.4;transform-origin:230px 168px;animation:pulse 3.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.72);opacity:.9}70%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+.d-pill-ok{fill:rgba(0,87,255,.22);stroke:var(--signal-b);stroke-width:1}
+.d-pill-esc{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.3);stroke-width:1}
+.d-pill-txt{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:-.01em}
+
+/* Motion is decoration here; respect the setting. */
+@media(prefers-reduced-motion:reduce){
+  .d-flow,.d-core-pulse,.flow-dot circle{animation:none}
+  .flow-dot animateMotion{display:none}
+}
+
+/* With the schematic occupying the right column, the wave becomes the hero's
+   base — still once, still behind whitespace. */
+.hero{padding-bottom:132px}
+.hero::after{inset:auto 0 0 0;height:150px;background-position:right bottom}
+@media(max-width:900px){
+  .diagram{order:-1}
+  .noc-item{flex:1 1 46%;border-right:0;border-bottom:1px solid var(--line)}
+  .noc-item:nth-last-child(-n+1){border-bottom:0}
+}
+
+/* The AI section lost its generated illustration; it reads as one column now. */
+.ai-split{display:block}
+.ai-split .checks{max-width:64ch}
