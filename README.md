@@ -17,6 +17,21 @@ assets/img/*.svg      illustrations, drawn for this site
 *.html                build output — do not edit these directly
 ```
 
+## The brand spec is not in this repo
+
+Colours, typography, logo construction, iconography and tone of voice live in
+**`bobroff-cap/intwin` → `brand/`** — a private repository. This one is public
+and served by GitHub Pages, so the brandbook cannot sit here.
+
+Read `brand/BRAND.md` before changing anything visual. Every token in
+`site.css` traces back to it, and the mark in the header is rebuilt as inline
+SVG from the construction numbers recorded there.
+
+**Superseded:** `assets/img/mark.png`, `mark-light.png`, `mark-mono.png` and
+`logo-original-2023.png` are the previous identity. Nothing references them any
+more — they are kept only until the favicons and `og-image.png`, which still
+carry the old mark, are reissued from the new one. Do not reuse them.
+
 ## Editing
 
 Content lives in `src/pages/`. Each page starts with a meta block:
