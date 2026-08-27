@@ -27,10 +27,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=8">
+<link rel="stylesheet" href="assets/css/site.css?v=9">
 </head>
 <body>
 
+<div class="progress" aria-hidden="true"><i id="progbar"></i></div>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="announce">
@@ -187,22 +188,22 @@
     <p class="lede" style="margin-top:10px">Every provider on your shortlist will tell you they answer quickly and price fairly. The question worth asking is which of them will sign it. These four go into your agreement, in the same document as the price.</p>
 
     <div class="grid-4" style="margin-top:30px">
-      <div class="card">
+      <div class="card rv">
         <span class="badge badge-ok">In the contract</span>
         <h3 style="margin-top:14px">A person answers</h3>
         <p style="margin-top:6px">Call during support hours and you reach an engineer, not a menu, not a queue, not a promise to call back. Fifteen minutes is the target on anything critical, and emergencies are covered 24/7/365.</p>
       </div>
-      <div class="card">
+      <div class="card rv">
         <span class="badge badge-ok">In the contract</span>
         <h3 style="margin-top:14px">The number is the number</h3>
         <p style="margin-top:6px">A flat monthly rate with security and backup inside it. No hourly billing after an incident, and no annual escalator that appears at renewal. When the price does need to change, you get the reasoning and notice.</p>
       </div>
-      <div class="card">
+      <div class="card rv">
         <span class="badge badge-ok">In the contract</span>
         <h3 style="margin-top:14px">Your environment stays yours</h3>
         <p style="margin-top:6px">Licences in your tenant, data under your ownership, documentation you can take with you. If you ever leave, you get a clean handover, because a provider who makes leaving painful has stopped competing on quality.</p>
       </div>
-      <div class="card">
+      <div class="card rv">
         <span class="badge badge-ok">In the contract</span>
         <h3 style="margin-top:14px">We say what we do not know</h3>
         <p style="margin-top:6px">If something is outside our depth, we say so and find the person whose depth it is. The alternative, learning on your outage, is how small providers lose clients they deserved to keep.</p>
@@ -222,25 +223,25 @@
     <p class="lede" style="margin-top:10px">We work best where compliance, client trust and uptime are the same conversation, and where the person currently handling IT has another job title.</p>
 
     <div class="grid-4" style="margin-top:30px">
-      <a class="card" href="solutions.html#cpa">
+      <a class="card rv" href="solutions.html#cpa">
         <div class="kicker">WISP · PTIN renewal</div>
         <h3>CPA &amp; tax firms</h3>
         <p>Client data, a load spike every spring, and the written security plan the IRS expects you to actually have.</p>
         <div class="more">What this looks like &rarr;</div>
       </a>
-      <a class="card" href="solutions.html#insurance">
+      <a class="card rv" href="solutions.html#insurance">
         <div class="kicker">NY DFS 23 NYCRR 500</div>
         <h3>Insurance agencies</h3>
         <p>AMS platforms, carrier portals, and a compliance bar that keeps moving under independent agencies.</p>
         <div class="more">What this looks like &rarr;</div>
       </a>
-      <a class="card" href="solutions.html#professional-services">
+      <a class="card rv" href="solutions.html#professional-services">
         <div class="kicker">Billable-hour uptime</div>
         <h3>Professional services</h3>
         <p>Law, consulting and agencies, where an outage does not just cost IT time. It costs billable time.</p>
         <div class="more">What this looks like &rarr;</div>
       </a>
-      <a class="card" href="solutions.html#private-equity">
+      <a class="card rv" href="solutions.html#private-equity">
         <div class="kicker">Diligence &amp; carve-outs</div>
         <h3>PE &amp; portfolio companies</h3>
         <p>IT diligence before close, then one standard across every add-on instead of four inherited stacks.</p>
@@ -292,37 +293,37 @@
     <p class="lede" style="margin-top:10px">Most of our clients hire us to replace a patchwork: one person who left, one vendor for backup, one nephew who set up the firewall. We take the whole thing.</p>
 
     <div class="grid-3" style="margin-top:34px">
-      <a class="card" href="managed-it.html">
+      <a class="card rv" href="managed-it.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="2.0" fill="var(--signal)" stroke="none"/></svg>
         <h3>Fully Managed IT</h3>
         <p>We run day-to-day IT: monitoring, patching, users, hardware, vendors. You set the business priorities.</p>
         <div class="more">Learn more &rarr;</div>
       </a>
-      <a class="card" href="co-managed-it.html">
+      <a class="card rv" href="co-managed-it.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="2.0" fill="var(--signal)" stroke="none"/></svg>
         <h3>Co-Managed IT</h3>
         <p>Your IT lead keeps the wheel. We add capacity, night coverage and specialist skills, with a clear split of duties.</p>
         <div class="more">Learn more &rarr;</div>
       </a>
-      <a class="card" href="cybersecurity.html">
+      <a class="card rv" href="cybersecurity.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="2.4" fill="var(--signal)" stroke="none"/></svg>
         <h3>Cybersecurity</h3>
         <p>Managed endpoint and identity protection, email filtering, and a 24/7 SOC watching for what gets past it.</p>
         <div class="more">Learn more &rarr;</div>
       </a>
-      <a class="card" href="cloud-microsoft-365.html">
+      <a class="card rv" href="cloud-microsoft-365.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.2 4.5 4.5 0 0 0 6.5 19z"/><circle cx="12" cy="14" r="2.0" fill="var(--signal)" stroke="none"/></svg>
         <h3>Cloud &amp; Microsoft 365</h3>
         <p>Migrate, secure and run Microsoft 365, SharePoint and the servers you still have. We keep the licensing honest.</p>
         <div class="more">Learn more &rarr;</div>
       </a>
-      <a class="card" href="backup-recovery.html">
+      <a class="card rv" href="backup-recovery.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/><circle cx="12" cy="5" r="1.6" fill="var(--signal)" stroke="none"/></svg>
         <h3>Backup &amp; Recovery</h3>
         <p>Backups for servers, endpoints and Microsoft 365. We restore them in a test on a schedule, so you know they work.</p>
         <div class="more">Learn more &rarr;</div>
       </a>
-      <a class="card" href="help-desk.html">
+      <a class="card rv" href="help-desk.html">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="12" cy="10" r="2.0" fill="var(--signal)" stroke="none"/></svg>
         <h3>Help Desk</h3>
         <p>Real people, named and reachable. Your team learns who they are; we learn how your business runs.</p>
@@ -457,23 +458,27 @@
     <p class="lede">No rip-and-replace on day one. We learn the environment before we change it.</p>
 
     <div class="process">
-      <div class="step">
+      <div class="step rv">
         <div class="dot">1</div>
+        <span class="step-when">Week 1</span>
         <h3>Assessment</h3>
         <p>We audit what you have: devices, licences, backups, security gaps, and the risks nobody has written down.</p>
       </div>
-      <div class="step">
+      <div class="step rv">
         <div class="dot">2</div>
+        <span class="step-when">Week 1&ndash;2</span>
         <h3>Plan and price</h3>
         <p>You get a fixed monthly number and a written list of what is fixed first, second and later.</p>
       </div>
-      <div class="step">
+      <div class="step rv">
         <div class="dot">3</div>
+        <span class="step-when">Week 2&ndash;4</span>
         <h3>Onboard</h3>
         <p>Monitoring, security and backup go on. We document as we go and meet your team properly.</p>
       </div>
-      <div class="step">
+      <div class="step rv">
         <div class="dot">4</div>
+        <span class="step-when">Ongoing</span>
         <h3>Run and review</h3>
         <p>Day-to-day support plus a quarterly session on what broke, what it cost, and what to do next.</p>
       </div>
@@ -604,6 +609,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=8"></script>
+<script src="assets/js/site.js?v=9"></script>
 </body>
 </html>

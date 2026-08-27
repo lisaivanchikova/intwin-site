@@ -95,3 +95,39 @@
 
   update();
 })();
+
+
+/* Scroll progress and reveal-on-scroll, ported from Gulnar's build.
+   Both are decoration, so both stand down when the visitor asks for less
+   motion, and the reveal never leaves content hidden if it cannot run. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var bar = document.getElementById('progbar');
+  if (bar && !reduce) {
+    var tick = false;
+    addEventListener('scroll', function () {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+        tick = false;
+      });
+    }, { passive: true });
+  }
+
+  var items = document.querySelectorAll('.rv');
+  if (!items.length) return;
+  document.documentElement.classList.add('js-rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+  items.forEach(function (el) { io.observe(el); });
+})();

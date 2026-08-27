@@ -746,3 +746,22 @@ footer a:hover{color:#fff}
    and the copy takes a comfortable measure instead of half the width. */
 .phero-grid{display:block}
 .phero-grid > div > .lede,.phero-grid > div > p{max-width:62ch}
+
+/* --- scroll progress, ported from Gulnar. Flat Signal, no gradient. --- */
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:120;pointer-events:none}
+.progress i{display:block;height:100%;width:0;background:var(--signal);transition:width .1s linear}
+
+/* --- reveal on scroll. Her interaction; we had nothing. --- */
+.js-rv .rv{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
+.js-rv .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .js-rv .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* --- the timing label on each process step. Answers "how long", which is the
+       question the step titles alone leave open. --- */
+.step-when{
+  display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
