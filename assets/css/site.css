@@ -74,6 +74,9 @@ p a:hover,li a:hover,td a:hover,dd a:hover{text-decoration-color:currentColor}
 :focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:var(--r-xs)}
 h1,h2,h3,h4{font-family:var(--display);color:var(--ink);line-height:1.14;font-weight:700;letter-spacing:-.022em;text-wrap:balance}
 h1{font-size:clamp(34px,4.8vw,56px);font-weight:800;letter-spacing:-.03em}
+/* Signal Blue is legitimate on a display line: at 800 weight and 34px+ the
+   3:1 large-text threshold applies, and it clears it. Never at body size. */
+.sig{color:var(--signal)}
 h2{font-size:clamp(25px,3vw,34px)}
 h3{font-size:18px;letter-spacing:-.01em}
 h4{font-size:15px;letter-spacing:0}
@@ -464,6 +467,10 @@ footer a:hover{color:#fff}
 .fbrand .wm{font-size:18px;letter-spacing:-.03em;line-height:1}
 .fbrand .wm .c{color:#fff;font-weight:800}
 .fbrand .wm .p{color:var(--echo);font-weight:500}
+/* The primary tagline goes with the logo, everywhere — so it sits under the
+   footer lockup, set as a mono label like every other uppercase run. */
+.ftag{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--echo);margin:-6px 0 14px}
 .fabout{font-size:14px;line-height:1.6;max-width:34ch}
 .fcontact div{padding:4px 0;display:flex;gap:9px;align-items:flex-start}
 .fcontact .ico{width:16px;height:16px;flex:0 0 auto;margin-top:4px;color:var(--mist-blue)}
