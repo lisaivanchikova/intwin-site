@@ -4,7 +4,7 @@
       <stop offset="0" stop-color="#2E3646"/><stop offset="1" stop-color="#282F3C"/>
     </linearGradient>
     <linearGradient id="lk" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5AA9FF"/><stop offset="1" stop-color="#0A84FF"/>
+      <stop offset="0" stop-color="#3E7DFF"/><stop offset="1" stop-color="#0057FF"/>
     </linearGradient>
   </defs>
 
@@ -20,7 +20,7 @@
   <!-- lock on the cloud -->
   <g transform="translate(258 96)">
     <rect x="0" y="34" width="84" height="66" rx="12" fill="url(#lk)"/>
-    <path d="M18 34V24a24 24 0 0 1 48 0v10" fill="none" stroke="#0A84FF" stroke-width="11" stroke-linecap="round"/>
+    <path d="M18 34V24a24 24 0 0 1 48 0v10" fill="none" stroke="#0057FF" stroke-width="11" stroke-linecap="round"/>
     <circle cx="42" cy="62" r="9" fill="#2E3646"/>
     <rect x="38" y="66" width="8" height="18" rx="4" fill="#2E3646"/>
   </g>
@@ -34,14 +34,14 @@
   <g transform="translate(178 266)">
     <rect x="0" y="0" width="76" height="100" rx="9" fill="#C2CBE0"/>
     <rect x="10" y="12" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="21" r="4" fill="#8FB4FF"/><rect x="30" y="18" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="21" r="4" fill="#A9BDF0"/><rect x="30" y="18" width="26" height="6" rx="3" fill="#7A8AAD"/>
     <rect x="10" y="40" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="49" r="4" fill="#30D158"/><rect x="30" y="46" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="49" r="4" fill="#A9BDF0"/><rect x="30" y="46" width="26" height="6" rx="3" fill="#7A8AAD"/>
     <rect x="10" y="68" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="77" r="4" fill="#8FB4FF"/><rect x="30" y="74" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="77" r="4" fill="#A9BDF0"/><rect x="30" y="74" width="26" height="6" rx="3" fill="#7A8AAD"/>
   </g>
   <g transform="translate(262 266)">
-    <rect x="0" y="0" width="76" height="100" rx="9" fill="#0A84FF"/>
+    <rect x="0" y="0" width="76" height="100" rx="9" fill="#0057FF"/>
     <rect x="10" y="12" width="56" height="18" rx="4" fill="#2E3646" opacity=".25"/>
     <circle cx="20" cy="21" r="4" fill="#2E3646"/><rect x="30" y="18" width="26" height="6" rx="3" fill="#2E3646" opacity=".55"/>
     <rect x="10" y="40" width="56" height="18" rx="4" fill="#2E3646" opacity=".25"/>
@@ -52,18 +52,18 @@
   <g transform="translate(346 266)">
     <rect x="0" y="0" width="76" height="100" rx="9" fill="#C2CBE0"/>
     <rect x="10" y="12" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="21" r="4" fill="#30D158"/><rect x="30" y="18" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="21" r="4" fill="#A9BDF0"/><rect x="30" y="18" width="26" height="6" rx="3" fill="#7A8AAD"/>
     <rect x="10" y="40" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="49" r="4" fill="#8FB4FF"/><rect x="30" y="46" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="49" r="4" fill="#A9BDF0"/><rect x="30" y="46" width="26" height="6" rx="3" fill="#7A8AAD"/>
     <rect x="10" y="68" width="56" height="18" rx="4" fill="#8E9BB8"/>
-    <circle cx="20" cy="77" r="4" fill="#30D158"/><rect x="30" y="74" width="26" height="6" rx="3" fill="#7A8AAD"/>
+    <circle cx="20" cy="77" r="4" fill="#A9BDF0"/><rect x="30" y="74" width="26" height="6" rx="3" fill="#7A8AAD"/>
   </g>
 
   <!-- floating badge -->
   <g transform="translate(410 158)">
     <rect x="0" y="0" width="112" height="40" rx="20" fill="#2E3646" stroke="#232935" stroke-width="1.6"/>
-    <circle cx="22" cy="20" r="11" fill="#24352E"/>
-    <path d="M17 20l4 4 7-8" fill="none" stroke="#30D158" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="22" cy="20" r="11" fill="#1B2540"/>
+    <path d="M17 20l4 4 7-8" fill="none" stroke="#A9BDF0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="40" y="12" width="56" height="6" rx="3" fill="#C2CBE0"/>
     <rect x="40" y="24" width="36" height="5" rx="2.5" fill="#222833"/>
   </g>

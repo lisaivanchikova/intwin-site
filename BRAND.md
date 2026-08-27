@@ -85,20 +85,28 @@ extrabold with its second line in Signal Blue. One filled Signal Blue button
 beside one outlined ghost. A stats strip under the hero with the figures set
 in mono.
 
-## Where the site as built breaks these rules
+## Where the site stands against these rules
 
-| Rule | Site today | Fix |
-|---|---|---|
-| Corners 2–4px | 14px on cards, 8px on buttons | Reduce the radius tokens |
-| No gradients | The hero is a gradient | Flat fill |
-| No glows | Shadow tokens on cards and dropdowns | Drop or flatten |
-| Cards near-black `#0E1118` | Cards are **lighter** than the page | Invert: cards go darker |
-| Signal Blue `#0057FF` | Accent is `#3D9BFF` | Fills to Signal, text to Echo |
-| Manrope + JetBrains Mono | Archivo + Inter | Swap both faces |
-| No all-caps sans | Eyebrows are uppercase sans | Eyebrows to mono |
-| One Signal CTA per viewport | Several blue buttons share a screen | Audit section by section |
-| Dot-wave once in the hero | Absent | Build the pattern |
-| Logo: circles plus `intwin tech` | The brain/network mark | Replace the mark |
+Stage A (tokens, type, radii, shadows, mono labels) landed 2026-08-27.
+
+| Rule | State |
+|---|---|
+| Corners 2–4px | **Done** — `--r` 4, `--r-s` 3, `--r-xs` 2. Circles in the mark and in avatars stay circles. |
+| No gradients | **Done** — the hero is a flat `--well`. |
+| No glows | **Done** — shadow tokens deleted. Overlays separate with `--line-lift`, a brighter hairline. |
+| Cards near-black `#0E1118` | **Done** — cards, heroes, form cards and the comparison table are `--well`; the page is Graphite. |
+| Signal Blue `#0057FF` | **Done** — `--signal` fills and marks, `--echo` carries text. |
+| Manrope + JetBrains Mono | **Done** — one sans family, mono for labels and figures. |
+| No all-caps sans | **Done** — every uppercase run is mono: eyebrows, kickers, badges, table heads, roles, years. |
+| Logo: circles plus `intwin tech` | **Done** — inline SVG built from the measured construction below. Wordmark is lowercase, `tech` in Echo. |
+| Illustrations on palette | **Done** — system blues and greens remapped; only blues, blue-greys and skin tones remain. |
+| One Signal CTA per viewport | **Partly** — the header CTA is outlined and the process steps are outlined rather than filled, so the hero owns the only fill above the fold. Lower sections have not been audited one by one. |
+| Dot-wave once in the hero | **Not started.** |
+| Long-form pages may switch to Paper | **Not started**, and optional. |
+
+Also outstanding, carried from before the brandbook: the favicons and
+`og-image.png` still carry the previous mark, and the forms are still
+`mailto:`.
 
 ## The logo (brandbook page 4)
 

@@ -4,7 +4,7 @@
       <stop offset="0" stop-color="#2E3646"/><stop offset="1" stop-color="#282F3C"/>
     </linearGradient>
     <linearGradient id="shd" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5AA9FF"/><stop offset="1" stop-color="#0A84FF"/>
+      <stop offset="0" stop-color="#3E7DFF"/><stop offset="1" stop-color="#0057FF"/>
     </linearGradient>
   </defs>
 
@@ -17,8 +17,8 @@
 
   <!-- plant -->
   <path d="M74 386V330" stroke="#C2CBE0" stroke-width="5" stroke-linecap="round"/>
-  <path d="M74 344c-24-4-34-22-32-40 20-2 34 14 32 40z" fill="#45B96A"/>
-  <path d="M74 350c22-8 30-28 24-45-19 1-30 20-24 45z" fill="#5FC98A"/>
+  <path d="M74 344c-24-4-34-22-32-40 20-2 34 14 32 40z" fill="#8DA6E6"/>
+  <path d="M74 350c22-8 30-28 24-45-19 1-30 20-24 45z" fill="#C6D6F5"/>
   <path d="M56 386h36l-5 30a7 7 0 0 1-7 6H68a7 7 0 0 1-7-6z" fill="#C2CBE0"/>
 
   <!-- laptop base -->
@@ -40,13 +40,13 @@
   <!-- screen: stat tiles -->
   <rect x="175" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
   <rect x="184" y="176" width="34" height="6" rx="3" fill="#1F242E"/>
-  <rect x="184" y="188" width="50" height="11" rx="3" fill="#0A84FF"/>
+  <rect x="184" y="188" width="50" height="11" rx="3" fill="#0057FF"/>
   <rect x="261" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
   <rect x="270" y="176" width="30" height="6" rx="3" fill="#1F242E"/>
   <rect x="270" y="188" width="44" height="11" rx="3" fill="#C2CBE0"/>
   <rect x="347" y="167" width="76" height="42" rx="6" fill="#2E3646"/>
   <rect x="356" y="176" width="36" height="6" rx="3" fill="#1F242E"/>
-  <rect x="356" y="188" width="38" height="11" rx="3" fill="#30D158"/>
+  <rect x="356" y="188" width="38" height="11" rx="3" fill="#A9BDF0"/>
 
   <!-- screen: chart card -->
   <rect x="175" y="221" width="248" height="128" rx="8" fill="#2E3646"/>
@@ -55,11 +55,11 @@
   <rect x="190" y="306" width="17" height="28" rx="3" fill="#212730"/>
   <rect x="216" y="292" width="17" height="42" rx="3" fill="#212730"/>
   <rect x="242" y="299" width="17" height="35" rx="3" fill="#212730"/>
-  <rect x="268" y="277" width="17" height="57" rx="3" fill="#0A84FF"/>
+  <rect x="268" y="277" width="17" height="57" rx="3" fill="#0057FF"/>
   <rect x="294" y="286" width="17" height="48" rx="3" fill="#212730"/>
-  <rect x="320" y="266" width="17" height="68" rx="3" fill="#0A84FF"/>
+  <rect x="320" y="266" width="17" height="68" rx="3" fill="#0057FF"/>
   <rect x="346" y="281" width="17" height="53" rx="3" fill="#212730"/>
-  <rect x="372" y="255" width="17" height="79" rx="3" fill="#0A84FF"/>
+  <rect x="372" y="255" width="17" height="79" rx="3" fill="#0057FF"/>
   <!-- trend line -->
   <path d="M198 296l26-10 26 6 26-18 26 8 26-16 26 9 26-18" fill="none" stroke="#C2CBE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="380" cy="257" r="4.5" fill="#C2CBE0"/>
@@ -75,7 +75,7 @@
   <g transform="translate(94 176)">
     <rect x="0" y="0" width="86" height="34" rx="8" fill="#2E3646" stroke="#252B37"/>
     <circle cx="19" cy="17" r="9" fill="#282F3C"/>
-    <path d="M15 17l3 3 6-6" fill="none" stroke="#0A84FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15 17l3 3 6-6" fill="none" stroke="#0057FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="34" y="10" width="40" height="5" rx="2.5" fill="#222833"/>
     <rect x="34" y="20" width="26" height="5" rx="2.5" fill="#272D39"/>
   </g>
