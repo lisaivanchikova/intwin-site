@@ -20,6 +20,7 @@
   --echo:#A9BDF0;
   --echo-h:#CBD8F7;
   --ink-navy:#131A54;
+  --mist-blue:#DCEBF8;   /* icon strokes on dark */
 
   /* Surfaces run dark-to-darker: the page is Graphite, cards and heroes are
      the near-black the brandbook asks for, so a card reads as a well rather
@@ -94,6 +95,14 @@ p:last-child{margin-bottom:0}
 .sec{padding:72px 0}
 .sec-sm{padding:52px 0}
 .sec-mist{background:var(--band)}
+/* ---------- the pattern family ----------
+   Every pattern is the mark rearranged. Each rhythm has one job and they are
+   not interchangeable, so each appears exactly once, on the surface it is for.
+   All of them sit behind whitespace, never behind body text. */
+.hero,.phero,.cta-band{position:relative;overflow:hidden}
+.hero > .wrap,.phero > .wrap,.cta-band > .wrap{position:relative;z-index:1}
+.hero::after,.phero::after,.cta-band::after{content:"";position:absolute;pointer-events:none}
+
 /* Dropping an unfinished block can leave two tinted bands touching; read them
    as one continuous band instead of a doubled seam. */
 .sec-mist + .sec-mist,.sec-mist + .sec-sm.sec-mist{padding-top:0}
@@ -220,20 +229,42 @@ nav.main > a.hdr-cta:hover{background:var(--signal-h);border-color:var(--signal-
 }
 
 /* ---------- hero ---------- */
-/* Flat. No gradients anywhere in this brand. */
+/* Flat. No gradients anywhere in this brand.
+   The dot-wave is the hero expression of the pattern family and appears once
+   on the site: here, bleeding off the right edge, behind the empty half of the
+   grid. It is a crop of the master wave, recoloured for a dark ground — never
+   redrawn. */
 .hero{background:var(--well);border-bottom:1px solid var(--line2);padding:60px 0 64px}
-.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+.hero::after{
+  inset:0 -4% 0 42%;
+  background:url("../img/pattern-wave.png") right center/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 100%);
+}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;min-height:340px}
 .hero h1{margin-bottom:16px}
 .hero .lede{font-size:18px;margin-bottom:26px}
 .hero-art{width:100%}
 @media(max-width:900px){
   .hero{padding:40px 0 44px}
-  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero .wrap{grid-template-columns:1fr;gap:32px;min-height:0}
+  /* Never behind body text: on a phone the wave drops below the buttons. */
+  .hero{padding-bottom:170px}
+  .hero::after{inset:auto 0 0 0;height:170px;background-position:right bottom}
+  /* A phone opener has no whitespace beside the copy, and the rule is that a
+     pattern only ever sits behind whitespace. So here it does not sit. */
+  .phero::after{display:none}
   .hero-art{max-width:460px;margin:0 auto}
 }
 
 /* page hero (inner pages) */
+/* Ripple — rings expanding from one origin, directional. The brandbook gives
+   it hero areas and openers, which is what a page header is. */
 .phero{background:var(--well);border-bottom:1px solid var(--line2);padding:52px 0}
+.phero::after{
+  right:-170px;bottom:-210px;width:820px;height:585px;
+  background:url("../img/pattern-ripple.svg") right bottom/contain no-repeat;
+}
 .phero h1{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px}
 .phero .lede{font-size:17px}
 .phero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
@@ -245,7 +276,9 @@ nav.main > a.hdr-cta:hover{background:var(--signal-h);border-color:var(--signal-
 .strip .item{display:flex;gap:12px;padding:20px 22px 20px 0;align-items:flex-start;border-right:1px solid var(--line2)}
 .strip .item:last-child{border-right:0}
 .strip .item:not(:first-child){padding-left:22px}
-.strip .ico{flex:0 0 auto;width:22px;height:22px;color:var(--signal);margin-top:2px}
+/* Iconography: outline only, Mist strokes on dark, and exactly one Signal
+   dot per icon — that dot is the twin, and it is the one constant. */
+.strip .ico{flex:0 0 auto;width:22px;height:22px;color:var(--mist-blue);margin-top:2px}
 .strip h2{font-size:15px;letter-spacing:0;margin-bottom:2px;color:var(--ink);font-weight:600}
 .strip p{font-size:13.5px;line-height:1.5;color:var(--body)}
 @media(max-width:860px){
@@ -273,7 +306,7 @@ a.card h3,a.card-dark h3{color:var(--ink)}
 a.card-dark h3{color:#fff}
 .card p,.card li{color:var(--body)}
 a.card:hover{border-color:var(--signal-b);background:var(--signal-t2)}
-.card .ico{width:34px;height:34px;color:var(--signal);margin-bottom:14px}
+.card .ico{width:34px;height:34px;color:var(--mist-blue);margin-bottom:14px}
 .card h3{margin-bottom:6px}
 .card p{font-size:14.5px;line-height:1.55;margin-bottom:0}
 /* Cards in a row rarely have equal copy, so the link is pinned to the bottom
@@ -288,7 +321,7 @@ a.card .more{margin-top:auto;padding-top:12px}
 }
 .card-dark h3{color:#fff}
 .card-dark p{font-size:14.5px;color:#C7D2EA}
-.card-dark .ico{color:var(--echo)}
+.card-dark .ico{color:var(--mist-blue)}
 .card-dark .art{position:absolute;right:-10px;bottom:-10px;width:120px;opacity:.5}
 
 /* ---------- split section ---------- */
@@ -378,7 +411,12 @@ a.card .more{margin-top:auto;padding-top:12px}
 .quote cite{display:block;margin-top:10px;font-size:13.5px;color:var(--muted);font-style:normal}
 
 /* ---------- callout / CTA band ---------- */
-.cta-band{background:var(--ink-navy);color:#fff;padding:56px 0}
+/* Arc — the ring halved, built for bands far wider than they are tall. */
+.cta-band{background:var(--ink-navy);color:#fff;padding:56px 0 120px}
+.cta-band::after{
+  left:0;right:0;bottom:0;height:120px;
+  background:url("../img/pattern-arc.svg") left bottom/960px 120px repeat-x;
+}
 .cta-band h2{color:#fff;margin-bottom:12px}
 .cta-band p{color:#B5BCD0;font-size:16.5px;max-width:56ch}
 .cta-band .inner{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}
@@ -409,7 +447,14 @@ a.card .more{margin-top:auto;padding-top:12px}
 .callbox .btn{display:block;text-align:center;margin-top:14px}
 
 /* ---------- footer ---------- */
-footer{background:var(--well);--mark-bg:var(--well);color:#9BA3B9;padding:52px 0 28px;font-size:14.5px}
+/* Drift — density rising as the surface fades into an edge. The brandbook
+   gives it transitions and footers. */
+footer{background:var(--well);--mark-bg:var(--well);color:#9BA3B9;padding:52px 0 158px;font-size:14.5px;position:relative;overflow:hidden}
+footer::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:180px;pointer-events:none;
+  background:url("../img/pattern-drift.svg") left bottom/800px 180px repeat-x;
+}
+footer > .wrap{position:relative;z-index:1}
 footer h3{color:#fff;font-size:14px;letter-spacing:.02em;margin-bottom:14px;font-weight:600}
 footer a{color:#9BA3B9;display:block;padding:4px 0}
 footer a:hover{color:#fff}
@@ -421,7 +466,7 @@ footer a:hover{color:#fff}
 .fbrand .wm .p{color:var(--echo);font-weight:500}
 .fabout{font-size:14px;line-height:1.6;max-width:34ch}
 .fcontact div{padding:4px 0;display:flex;gap:9px;align-items:flex-start}
-.fcontact .ico{width:16px;height:16px;flex:0 0 auto;margin-top:4px;color:#7FBBFF}
+.fcontact .ico{width:16px;height:16px;flex:0 0 auto;margin-top:4px;color:var(--mist-blue)}
 .fbottom{
   border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:20px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#7C8499;

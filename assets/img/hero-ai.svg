@@ -17,7 +17,7 @@
     <rect x="76" y="120" width="46" height="6" rx="3" fill="#272D39"/>
 
     <rect x="40" y="150" width="128" height="40" rx="8" fill="#2E3646" stroke="#252B37"/>
-    <circle cx="60" cy="170" r="8" fill="#3A3222"/><circle cx="60" cy="170" r="3" fill="#DCEBF8"/>
+    <circle cx="60" cy="170" r="8" fill="#1D2333"/><circle cx="60" cy="170" r="3" fill="#DCEBF8"/>
     <rect x="76" y="162" width="60" height="6" rx="3" fill="#222833"/>
     <rect x="76" y="174" width="52" height="6" rx="3" fill="#272D39"/>
 
