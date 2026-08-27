@@ -254,19 +254,23 @@ nav.main > a.hdr-cta:hover{background:var(--signal-h);border-color:var(--signal-
   /* Never behind body text: on a phone the wave drops below the buttons. */
   .hero{padding-bottom:170px}
   .hero::after{inset:auto 0 0 0;height:170px;background-position:right bottom}
-  /* A phone opener has no whitespace beside the copy, and the rule is that a
-     pattern only ever sits behind whitespace. So here it does not sit. */
-  .phero::after{display:none}
+  /* On a phone the copy takes the full width, so the wave drops beneath it. */
+  .phero{padding-bottom:150px}
+  .phero::after{inset:auto 0 0 0;height:150px;background-position:right bottom}
   .hero-art{max-width:460px;margin:0 auto}
 }
 
 /* page hero (inner pages) */
-/* Ripple — rings expanding from one origin, directional. The brandbook gives
-   it hero areas and openers, which is what a page header is. */
-.phero{background:var(--well);border-bottom:1px solid var(--line2);padding:52px 0}
+/* Every page opener carries the wave now, not the ripple: it reads at a glance
+   where the ripple only whispered, and "one wave per surface" holds — each page
+   shows it once, in its own hero. The copy runs one column, so the right half
+   is whitespace, which is the only place a pattern is allowed. */
+.phero{background:var(--well);border-bottom:1px solid var(--line2);padding:56px 0}
 .phero::after{
-  right:-170px;bottom:-210px;width:820px;height:585px;
-  background:url("../img/pattern-ripple.svg") right bottom/contain no-repeat;
+  inset:0 -4% 0 46%;
+  background:url("../img/pattern-wave.png") right center/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 100%);
 }
 .phero h1{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px}
 .phero .lede{font-size:17px}
@@ -765,3 +769,18 @@ footer a:hover{color:#fff}
   display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);margin-bottom:6px;
 }
+
+/* --- "typical vs us" rows, ported from Gulnar's join page --- */
+.contrast{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.contrast-row{
+  display:flex;align-items:flex-start;gap:13px;
+  background:var(--well);border:1px solid var(--line);border-radius:var(--r);
+  padding:14px 17px;font-size:14.5px;line-height:1.5;
+}
+.contrast-row .lab{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  flex:none;padding:4px 8px;border-radius:var(--r-xs);margin-top:2px;font-weight:500;
+}
+.contrast-row.them{color:var(--muted)}
+.contrast-row.them .lab{background:var(--raise);color:var(--muted);border:1px solid var(--line)}
+.contrast-row.us .lab{background:var(--signal-t);color:var(--echo)}
