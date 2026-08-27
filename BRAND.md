@@ -112,9 +112,9 @@ in mono.
 Rules:
 
 - Clear space on all sides ≥ one ring diameter.
-- All three rings are the same size. The core stands apart with a small gap;
-  each echo slides behind the ring before it, showing its right crescent, with
-  a thin surface-coloured gap at the crossing.
+- All four circles are the same diameter — the core included. The core stands
+  apart with a small gap; each echo slides behind the ring before it, showing
+  its right crescent, with a thin surface-coloured gap at the crossing.
 - **Always two echoes**; one only at very small sizes (favicon, 16px).
 - Never rotate the mark or stack it vertically over the wordmark.
 - Wordmark is always lowercase: **intwin** ExtraBold + **tech** Medium.
@@ -122,4 +122,107 @@ Rules:
 - On dark surfaces the core inverts to light; **the signal ring never changes**.
 
 The mark is entirely geometric — circles, one stroked ring, two crescents — so
-it rebuilds as SVG at any size rather than being carried as a raster.
+it rebuilds as SVG at any size rather than being carried as a raster. The
+construction below was measured off the supplied artwork, so the SVG can be
+reproduced exactly rather than traced by eye.
+
+
+## Logo files
+
+Delivered 2026-08-27, five PNGs, now in `assets/img/brand/`. All RGBA with a
+baked background — there is no transparent cut-out among them, so a mark
+dropped onto a non-brand surface has to be rebuilt as SVG, not keyed out.
+
+| File | Size | What it is |
+|---|---|---|
+| `intwin-mark-light-1024.png` | 1024×1024 | Mark alone on Paper |
+| `intwin-mark-dark-1024.png` | 1024×1024 | Mark alone on Graphite |
+| `intwin-lockup-light-1800.png` | 1800×600 | Mark + wordmark on Paper |
+| `intwin-lockup-dark-1800.png` | 1800×600 | Mark + wordmark on Graphite |
+| `intwin-header-2400x800.png` | 2400×800 | Dark lockup + tagline + dot-wave |
+
+The brandbook PDF itself is **not** in this repo. It is internal, and this
+repo is public and served by GitHub Pages — anything committed here is
+downloadable by anyone. This file is the distillation; the PDF stays with
+Lisa.
+
+### Mark colours, measured
+
+The echoes are not one palette reused on both grounds. Each variant fades its
+echoes **toward its own background**, which is why the dark echoes are slate
+rather than blue.
+
+| Part | On Paper | On Graphite |
+|---|---|---|
+| Core (solid disc) | `#131A54` Ink Navy | `#EAF2FB` near-white |
+| Ring (the twin) | `#0057FF` Signal Blue | `#0057FF` Signal Blue |
+| Echo 1 | `#A9BDF0` Echo Blue | `#667292` |
+| Echo 2 | `#DCEBF8` Mist Blue | `#40464F` |
+| Ground | `#F7F9FC` Paper | `#14171F` Graphite |
+
+The ring holds `#0057FF` on both grounds — that is the brandbook rule made
+literal. The dark core is `#EAF2FB`, marginally cooler than Paper `#F7F9FC`;
+close enough that Paper is a safe substitute at small sizes.
+
+### Construction, measured off `intwin-mark-light-1024.png`
+
+Every value below is exact, in the 1024 canvas. Let **d** be the circle
+diameter.
+
+- **d = 300.** All four circles share it. Ink box: x 60–965, y 362–661,
+  so the mark is **3.02 : 1**, wider than it is tall.
+- **Ring stroke = 50 = d/6.** Inner hole 200. Both echoes use the same stroke.
+- Centres, on one horizontal axis at cy = 511.5:
+
+  | Circle | cx | Step from previous |
+  |---|---|---|
+  | Core | 209.5 | — |
+  | Ring | 543.5 | 334 = 1.113 d |
+  | Echo 1 | 679.5 | 136 = 0.453 d |
+  | Echo 2 | 815.5 | 136 = 0.453 d |
+
+- So the core sits **apart** — a 34px gap between core edge and ring edge —
+  while the three rings **overlap**, each echo offset by a hair under half a
+  diameter. That is the whole idea in geometry: the business is separate and
+  solid, the twin and its resonance interlock.
+- Stacking order is front to back: ring over echo 1 over echo 2. Each is drawn
+  whole; the one in front hides the rest, leaving only the right crescent.
+- There is no gap stroke in the artwork — the crescents meet the ring
+  directly. On a busy ground, add a ground-coloured outer stroke rather than
+  redrawing the geometry.
+
+### Lockup metrics, measured off the 1800×600 files
+
+Both light and dark lockups are pixel-identical in layout.
+
+- Mark height **192** (d = 192 at this scale), ink x 280–857.
+- Gap mark → wordmark: **77 = 0.40 × mark height**.
+- Wordmark ascender height **88 = 0.458 × mark height**, baseline at y 345.
+- Word space between `intwin` and `tech`: **23**.
+- The wordmark's optical centre sits on the mark's centre line, not its
+  baseline.
+
+Wordmark colour: on Paper, `intwin` is Graphite `#14171F` and `tech` is Signal
+Blue `#0057FF`. On Graphite, `intwin` is Paper and `tech` is Echo Blue
+`#A9BDF0` — again the contrast rule, applied by the brand's own designer.
+
+### Tagline
+
+The header file carries a tagline the brandbook pages did not:
+
+> **YOUR BUSINESS, TWINNED.**
+
+Set in JetBrains Mono, uppercase, wide tracking, Echo Blue `#A9BDF0`, sitting
+under `tech` and left-aligned to the `i` of `intwin`. It is a brand asset, not
+yet site copy — putting it on the site is a decision to take, not a detail to
+absorb.
+
+### The dot-wave
+
+Visible in the header, right third, behind whitespace — exactly the "once, in
+the hero" placement the brandbook calls for. It is a field of small dots whose
+vertical displacement traces a wave, densest at the crest.
+
+Measured: the brightest dot on Graphite is `#17344E`, which is Signal Blue at
+roughly **20% opacity** over the ground; most dots sit far below that. The
+pattern is meant to be felt, not read — it never approaches text contrast.
