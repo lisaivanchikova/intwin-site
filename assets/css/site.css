@@ -672,22 +672,43 @@ footer a:hover{color:#fff}
 .diagram-live{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--echo)}
 .diagram svg{position:relative;width:100%;height:auto;display:block}
 
-.d-flow{stroke:rgba(169,189,240,.5);stroke-width:1.4;fill:none;stroke-dasharray:4 6;animation:flow 3.4s linear infinite}
-@keyframes flow{to{stroke-dashoffset:-100}}
-.d-tile{fill:rgba(255,255,255,.045);stroke:var(--line)}
-.d-txt{fill:#D6DEF2;font-family:var(--mono);font-size:10px}
-.d-txt-dim{fill:var(--muted);font-family:var(--mono);font-size:8.5px;letter-spacing:.14em}
-.d-core-ring{fill:none;stroke:rgba(0,87,255,.45);stroke-width:1.4}
-.d-core-pulse{fill:none;stroke:rgba(0,87,255,.6);stroke-width:1.4;transform-origin:230px 168px;animation:pulse 3.4s ease-out infinite}
-@keyframes pulse{0%{transform:scale(.72);opacity:.9}70%{transform:scale(1.5);opacity:0}100%{opacity:0}}
-.d-pill-ok{fill:rgba(0,87,255,.22);stroke:var(--signal-b);stroke-width:1}
-.d-pill-esc{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.3);stroke-width:1}
-.d-pill-txt{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:-.01em}
+/* The hundred-ticket field. One dot per ticket in a month: the filled thirty
+   close without a person, the outlined seventy go to an engineer. The count is
+   the honest end of the published 20–40% deflection band, so the picture and
+   the copy cannot drift apart. */
+.tickets{
+  position:relative;display:grid;grid-template-columns:repeat(10,1fr);
+  gap:clamp(9px,1.5vw,15px);padding:clamp(6px,1vw,12px) 2px;
+}
+.fd{
+  width:100%;max-width:26px;aspect-ratio:1;border-radius:50%;display:block;justify-self:center;
+  border:1.5px solid var(--mark-echo-1);background:transparent;
+}
+.fd.auto{background:var(--signal);border-color:var(--signal)}
+.js-rv .tickets .fd{opacity:0;transform:scale(.4)}
+.js-rv .tickets.in .fd{
+  animation:fd-in .5s cubic-bezier(.2,.8,.3,1) forwards;
+  animation-delay:calc(var(--i,0) * 14ms);
+}
+@keyframes fd-in{to{opacity:1;transform:scale(1)}}
 
-/* Motion is decoration here; respect the setting. */
+.field-key{
+  position:relative;margin-top:clamp(16px,2vw,22px);border-top:1px solid var(--line2);
+  padding-top:14px;display:grid;gap:10px;
+}
+.fk{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--body);line-height:1.5}
+.fk .fd{width:11px;max-width:11px;flex:0 0 11px;opacity:1;transform:none;animation:none}
+.fk b{
+  font-family:var(--mono);font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums;
+  flex:0 0 auto;min-width:24px;
+}
+.field-note{
+  position:relative;margin-top:14px;font-size:13px;color:var(--muted);line-height:1.6;
+}
+
 @media(prefers-reduced-motion:reduce){
-  .d-flow,.d-core-pulse,.flow-dot circle{animation:none}
-  .flow-dot animateMotion{display:none}
+  .js-rv .tickets .fd{opacity:1;transform:none;animation:none}
+}
 }
 
 /* With the schematic occupying the right column, the wave becomes the hero's
@@ -795,3 +816,78 @@ footer a:hover{color:#fff}
 .contrast-row.them{color:var(--muted)}
 .contrast-row.them .lab{background:var(--raise);color:var(--muted);border:1px solid var(--line)}
 .contrast-row.us .lab{background:var(--signal-t);color:var(--echo)}
+
+/* ---------- calculators (workload on the home page, valuation on join) ------
+   Both live inside .calc. The inputs reuse .field so they inherit focus rings
+   and sizing from the forms, and the outputs reuse .calc-row so a calculated
+   figure sits on the same grid as the static rows that preceded it. */
+.calc-intro{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+.calc-fields{display:grid;gap:14px;margin-top:16px}
+.calc-fields .field{margin-bottom:0}
+.calc-lbl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:5px}
+.calc-lbl label{margin-bottom:0}
+.calc-lbl b{
+  font-family:var(--mono);font-size:14px;font-weight:700;color:var(--echo);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.calc input[type=range]{
+  width:100%;accent-color:var(--signal);background:transparent;margin:2px 0 0;height:22px;
+}
+.calc input[type=range]:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.calc-results{margin-top:18px}
+
+/* The headline figure on the valuation panel. */
+.val-out{border-top:1px solid var(--line2);margin-top:18px;padding-top:16px}
+.val-head{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+}
+.val-num{
+  font-family:var(--mono);font-size:clamp(26px,3.2vw,36px);font-weight:700;color:var(--ink);
+  letter-spacing:-.02em;margin-top:8px;font-variant-numeric:tabular-nums;line-height:1.1;
+}
+.val-sub{font-size:14px;color:var(--body);margin-top:8px;line-height:1.6}
+.val-sub b{color:var(--echo);font-family:var(--mono);font-weight:700}
+.val-drags{margin-top:16px;border-top:1px solid var(--line2);padding-top:14px}
+.val-drags h4{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:8px}
+.val-drag{display:flex;gap:10px;font-size:14px;color:var(--body);padding:5px 0;line-height:1.55}
+.val-drag i{
+  font-style:normal;font-family:var(--mono);font-size:13px;font-weight:700;flex:none;
+  min-width:44px;font-variant-numeric:tabular-nums;
+}
+.val-drag.down i{color:#F2A0A0}
+.val-drag.up i{color:var(--ok)}
+
+/* Email capture under a result. */
+.gate{margin-top:18px;border-top:1px solid var(--line2);padding-top:16px}
+.gate-lbl{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.gate-row{display:flex;gap:10px}
+.gate-row input{
+  flex:1 1 auto;min-width:0;font-family:inherit;font-size:15px;color:var(--ink);
+  border:1px solid var(--line);border-radius:var(--r-s);padding:11px 13px;background:var(--raise);
+}
+.gate-row input:focus{outline:0;border-color:var(--signal);box-shadow:0 0 0 3px rgba(0,87,255,.5)}
+.gate-row .btn{flex:0 0 auto;margin-top:0;width:auto}
+.gate-msg{font-size:13.5px;margin-top:10px;line-height:1.6;display:none}
+.gate-msg.show{display:block}
+.gate-msg.ok{color:var(--ok)}
+.gate-msg.err{color:#F2A0A0}
+.gate-fine{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+@media(max-width:560px){.gate-row{flex-direction:column}.gate-row .btn{width:100%;text-align:center}}
+
+/* Range inputs: the default track is near-white and shouts on a dark panel. */
+.calc input[type=range]{-webkit-appearance:none;appearance:none;height:20px}
+.calc input[type=range]::-webkit-slider-runnable-track{
+  height:5px;border-radius:3px;background:var(--raise);border:1px solid var(--line);
+}
+.calc input[type=range]::-moz-range-track{
+  height:5px;border-radius:3px;background:var(--raise);border:1px solid var(--line);
+}
+.calc input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
+  background:var(--signal);border:0;margin-top:-6px;
+}
+.calc input[type=range]::-moz-range-thumb{
+  width:16px;height:16px;border-radius:50%;background:var(--signal);border:0;
+}
+.calc input[type=range]::-moz-range-progress{height:5px;border-radius:3px;background:var(--signal)}

@@ -254,9 +254,9 @@ layout: join
   <div class="wrap">
     <div class="eyebrow">Valuation</div>
     <h2>What your business is worth, and who decides</h2>
-    <div class="split" style="margin-top:26px">
+    <div class="split" style="margin-top:26px;align-items:start">
       <div>
-        <p class="lede">We will not put a multiple on this page, because anyone who does is quoting a number they have not earned the right to quote. What we will do, early and in writing, is tell you the range your business sits in and exactly what drives it up or down.</p>
+        <p class="lede">We will not print one multiple on this page, because a single number that fits every MSP is a marketing device rather than a valuation. What we can do is hand you the arithmetic. The calculator beside this runs the five inputs that actually move the price, weighted the way disclosed transactions weight them, and it shows every adjustment it makes rather than returning a number from a black box.</p>
         <ul class="checks" style="margin-top:18px">
           <li>Recurring share of revenue, and how contracted it actually is</li>
           <li>Client concentration, and what happens if the top account leaves</li>
@@ -266,11 +266,72 @@ layout: join
         </ul>
       </div>
       <div>
-        <div class="card rv">
-          <h3>Get a rough range before you talk to anyone</h3>
-          <p style="margin-top:8px">Answer a few questions about revenue, margin and recurring mix, and we will come back with the range your business sits in and the two things most likely to move it. No call required, no obligation, and nothing kept on file if you ask us not to.</p>
-          <a class="btn" style="margin-top:16px" href="#start">Ask for an estimate</a>
-          <p style="margin-top:10px;font-size:13px;color:var(--muted)">Takes about three minutes to fill in.</p>
+        <div class="calc rv" id="val-calc">
+          <div class="eyebrow">What it is worth today</div>
+          <p class="calc-intro">Nothing is sent anywhere while you type. The number appears as you answer, and the email box below is only if you want the written version.</p>
+
+          <div class="calc-fields">
+            <div class="form-row">
+              <div class="field">
+                <label for="v-rev">Annual revenue</label>
+                <input type="text" id="v-rev" value="$2,500,000" inputmode="numeric" autocomplete="off" spellcheck="false">
+              </div>
+              <div class="field">
+                <label for="v-ebitda">Adjusted EBITDA</label>
+                <input type="text" id="v-ebitda" value="$400,000" inputmode="numeric" autocomplete="off" spellcheck="false">
+              </div>
+            </div>
+            <div class="field">
+              <div class="calc-lbl"><label for="v-rec">Recurring share of revenue</label><b id="v-rec-out">65%</b></div>
+              <input type="range" id="v-rec" min="20" max="95" step="5" value="65">
+            </div>
+            <div class="field">
+              <div class="calc-lbl"><label for="v-conc">Largest client, share of revenue</label><b id="v-conc-out">20%</b></div>
+              <input type="range" id="v-conc" min="5" max="60" step="5" value="20">
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="v-growth">Last three years</label>
+                <select id="v-growth">
+                  <option value="-1">Revenue shrinking</option>
+                  <option value="0" selected>Roughly flat</option>
+                  <option value="1">Growing under 10% a year</option>
+                  <option value="2">Growing over 10% a year</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="v-owner">Your role in it</label>
+                <select id="v-owner">
+                  <option value="1">It runs without me</option>
+                  <option value="0" selected>I hold the clients</option>
+                  <option value="-1">I still do the tech</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="val-out">
+            <div class="val-head">Indicative range</div>
+            <div class="val-num" id="v-range">&mdash;</div>
+            <p class="val-sub" id="v-sub">&mdash;</p>
+          </div>
+
+          <div class="val-drags" id="v-drags" hidden>
+            <h4 id="v-drags-h">What is moving your number</h4>
+            <div id="v-drag-list"></div>
+          </div>
+
+          <div class="gate">
+            <label class="gate-lbl" for="v-email">Want this written up, with what to fix first?</label>
+            <div class="gate-row">
+              <input type="email" id="v-email" placeholder="you@company.com" autocomplete="email" aria-label="Your email">
+              <button class="btn" type="button" id="v-send">Send it</button>
+            </div>
+            <p class="gate-msg" id="v-msg" role="status"></p>
+            <p class="gate-fine">Confidential, and never circulated. One reply from Nicolas, not a drip campaign, and we will delete the figures on request.</p>
+          </div>
+
+          <p class="calc-note">Calibrated on published transaction data, not on our own deal book &mdash; median 8.9&times; EBITDA across 120 disclosed MSP deals at a $38.5M median size, falling to about 5&times; under $5M. Indicative only, and not an offer.</p>
         </div>
       </div>
     </div>
