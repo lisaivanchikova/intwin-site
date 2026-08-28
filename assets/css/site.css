@@ -657,66 +657,11 @@ footer a:hover{color:#fff}
 }
 .noc-item span{display:block;font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
 
-/* The schematic. Flat surfaces, hairline border, no glow. */
-.diagram{
-  background:var(--ground);border:1px solid var(--line);border-radius:var(--r);
-  padding:clamp(18px,2.2vw,26px);position:relative;overflow:hidden;
-}
-.diagram::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(circle at 1px 1px,rgba(169,189,240,.10) 1px,transparent 0);
-  background-size:20px 20px;
-}
-.diagram-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;position:relative}
-.diagram-top .mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.diagram-live{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--echo)}
-.diagram svg{position:relative;width:100%;height:auto;display:block}
-
-/* The hundred-ticket field. One dot per ticket in a month: the filled thirty
-   close without a person, the outlined seventy go to an engineer. The count is
-   the honest end of the published 20–40% deflection band, so the picture and
-   the copy cannot drift apart. */
-.tickets{
-  position:relative;display:grid;grid-template-columns:repeat(10,1fr);
-  gap:clamp(9px,1.5vw,15px);padding:clamp(6px,1vw,12px) 2px;
-}
-.fd{
-  width:100%;max-width:26px;aspect-ratio:1;border-radius:50%;display:block;justify-self:center;
-  border:1.5px solid var(--mark-echo-1);background:transparent;
-}
-.fd.auto{background:var(--signal);border-color:var(--signal)}
-.js-rv .tickets .fd{opacity:0;transform:scale(.4)}
-.js-rv .tickets.in .fd{
-  animation:fd-in .5s cubic-bezier(.2,.8,.3,1) forwards;
-  animation-delay:calc(var(--i,0) * 14ms);
-}
-@keyframes fd-in{to{opacity:1;transform:scale(1)}}
-
-.field-key{
-  position:relative;margin-top:clamp(16px,2vw,22px);border-top:1px solid var(--line2);
-  padding-top:14px;display:grid;gap:10px;
-}
-.fk{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--body);line-height:1.5}
-.fk .fd{width:11px;max-width:11px;flex:0 0 11px;opacity:1;transform:none;animation:none}
-.fk b{
-  font-family:var(--mono);font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums;
-  flex:0 0 auto;min-width:24px;
-}
-.field-note{
-  position:relative;margin-top:14px;font-size:13px;color:var(--muted);line-height:1.6;
-}
-
-@media(prefers-reduced-motion:reduce){
-  .js-rv .tickets .fd{opacity:1;transform:none;animation:none}
-}
-}
-
-/* With the schematic occupying the right column, the wave becomes the hero's
-   base — still once, still behind whitespace. */
-.hero{padding-bottom:132px}
-.hero::after{inset:auto 0 0 0;height:150px;background-position:right bottom}
+/* The hero's right column is deliberately empty. The brandbook's own website
+   mockup puts the dot-wave where an illustration would otherwise sit, and a
+   pattern behind an illustration is neither whitespace nor calm — so the wave
+   bleeds off the right edge (see .hero::after) and nothing competes with it. */
 @media(max-width:900px){
-  .diagram{order:-1}
   .noc-item{flex:1 1 46%;border-right:0;border-bottom:1px solid var(--line)}
   .noc-item:nth-last-child(-n+1){border-bottom:0}
 }
