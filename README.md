@@ -12,7 +12,7 @@ build.js              page assembler (Node, no dependencies)
 src/layout.html       shared shell: head, top bar, header/nav, footer
 src/pages/*.html      page content + a meta block
 assets/css/site.css   the whole design system
-assets/js/site.js     navigation only (dropdowns, mobile menu)
+assets/js/site.js     navigation, the two calculators, lead capture
 assets/img/*.svg      illustrations, drawn for this site
 *.html                build output — do not edit these directly
 ```
@@ -112,3 +112,25 @@ These were deliberate and should survive future edits:
   similar when a real endpoint exists.
 - SOC 2 wording on `about.html` says "aligned to" rather than "audited against" — tighten once
   the current audit status is confirmed.
+
+
+## Forms have no server yet
+
+Every form and both calculators route through `window.intwinLead` in
+`assets/js/site.js`. It posts JSON to `LEAD_ENDPOINT`, a constant at the top of
+that block. The constant is empty, so today a submission opens a pre-filled
+mail draft to info@intwin.tech instead — nothing is lost, but nothing is
+captured automatically either.
+
+When the site moves off GitHub Pages onto a server, set `LEAD_ENDPOINT` to the
+handler URL and both calculators start delivering leads. That is the only
+change required; the payloads are already structured (every calculator input,
+the computed result, the page it came from).
+
+## The two calculators
+
+`#wl-calc` on the home page and `#val-calc` on join.html. Both are arithmetic on
+published benchmarks rather than models, and both print their assumptions on the
+page. If a benchmark is updated, change it in one place — the constants at the
+top of each block in `site.js` — and update the note under the panel to match.
+Do not let the number in the copy drift from the number in the code.
