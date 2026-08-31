@@ -349,6 +349,14 @@ a.card .more{margin-top:auto;padding-top:12px}
 .checks.on-dark li{color:var(--ink)}
 .checks.on-dark li::before{background-color:rgba(169,189,240,.18)}
 
+/* Numbered list — same idiom as .checks, with a mono numeral in place of the tick. */
+.ordered{list-style:none;counter-reset:o;margin:18px 0 0;padding:0}
+.ordered li{position:relative;counter-increment:o;padding:9px 0 9px 38px;font-size:15.5px;color:var(--body)}
+.ordered li b{color:var(--ink)}
+.ordered li::before{content:counter(o);position:absolute;left:0;top:10px;width:22px;height:22px;
+  border-radius:var(--r-xs);background:var(--signal-t);color:var(--echo);
+  font:700 12px/22px var(--mono);text-align:center}
+
 /* ---------- stats band ---------- */
 .stats{background:var(--ink-navy);border-radius:var(--r);padding:34px 24px;color:#fff}
 .stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
@@ -726,6 +734,7 @@ footer a:hover{color:#fff}
 /* The page openers no longer carry an illustration, so they run as one column
    and the copy takes a comfortable measure instead of half the width. */
 .phero-grid{display:block}
+.phero .callbox{margin-top:26px}
 .phero-grid > div > .lede,.phero-grid > div > p{max-width:62ch}
 
 /* --- scroll progress, ported from Gulnar. Flat Signal, no gradient. --- */
