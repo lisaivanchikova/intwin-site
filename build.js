@@ -29,10 +29,6 @@ const ROOT = __dirname;
 const SRC = path.join(ROOT, 'src');
 const PAGES = path.join(SRC, 'pages');
 
-// Canonical origin. Every absolute URL in the built pages derives from this one
-// line, so moving the site to another host is a one-value change.
-const SITE = 'https://lisaivanchikova.github.io/intwin-site';
-
 const DRAFT = process.argv.includes('--draft');
 const year = 2026;
 const layouts = new Map();
@@ -121,7 +117,6 @@ function parseMeta(raw) {
 }
 
 const outstanding = [];
-const urls = [];
 const files = fs.readdirSync(PAGES).filter((f) => f.endsWith('.html')).sort();
 let built = 0;
 
@@ -138,11 +133,7 @@ for (const file of files) {
   const layout = readLayout((meta.layout || '').trim());
   const todo = handleTodos(body);
   const esc = (v) => v.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-  const canon = file === 'index.html' ? SITE + '/' : SITE + '/' + file;
-  urls.push(canon);
   const out = layout
-    .replaceAll('{{SITE}}', SITE)
-    .replaceAll('{{CANON}}', canon)
     .replaceAll('{{TITLE}}', esc(meta.title))
     .replaceAll('{{DESC}}', esc(meta.desc))
     .replace('{{BODY}}', todo.html.trim())
@@ -165,15 +156,6 @@ for (const file of files) {
   });
   built += 1;
 }
-
-// Sitemap, regenerated on every build so it can never drift from the pages.
-const today = new Date().toISOString().slice(0, 10);
-const sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-  .concat(urls.map((u) => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`))
-  .concat(['</urlset>', '']).join('\n');
-fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
-console.log('  \u2713 sitemap.xml');
 
 console.log(`\nBuilt ${built} page${built === 1 ? '' : 's'}${DRAFT ? ' (draft)' : ''}.`);
 if (outstanding.length) {
