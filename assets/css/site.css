@@ -141,13 +141,6 @@ p a.arrow-link:hover{text-decoration:none}
 .arrow-link:hover::after{transform:translateX(3px)}
 
 /* ---------- top bar ---------- */
-.topbar{background:var(--well);color:#A7AFC4;font-size:12.5px;border-bottom:1px solid var(--line2)}
-.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 24px;flex-wrap:wrap}
-.topbar b{color:#fff;font-weight:600}
-.topbar a{color:var(--body)}
-.topbar a:hover{color:#fff}
-.topbar .tb-right{display:flex;gap:18px}
-@media(max-width:720px){.topbar .tb-right{display:none}}
 
 /* ---------- header ---------- */
 header{
@@ -519,9 +512,6 @@ footer a:hover{color:#fff}
 ::selection{background:rgba(0,87,255,.45);color:#fff}
 
 /* ---------- join: owner-facing shell ---------- */
-.topbar-join{background:var(--ink-navy);color:#B8C4E0}
-.topbar-join a{color:var(--echo)}
-.topbar-join a:hover{color:#fff}
 .fgrid-join{grid-template-columns:1.7fr 1fr 1fr}
 @media(max-width:760px){.fgrid-join{grid-template-columns:1fr}}
 
