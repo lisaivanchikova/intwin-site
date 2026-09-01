@@ -31,7 +31,7 @@ const PAGES = path.join(SRC, 'pages');
 
 // Canonical origin. Every absolute URL in the built pages derives from this one
 // line, so moving the site to another host is a one-value change.
-const SITE = 'https://intwin.tech';
+const SITE = 'https://lisaivanchikova.github.io/intwin-site';
 
 const DRAFT = process.argv.includes('--draft');
 const year = 2026;
